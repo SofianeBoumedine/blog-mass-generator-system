@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} - LemmiLink Blog</title>
+    <meta name="description" content="{{description}} Découvrez les solutions LemmiLink pour votre netlinking.">
+    <meta name="keywords" content="LemmiLink, netlinking, SEO, backlinks, plateforme netlinking, {{title}}">
+    <link rel="canonical" href="https://lemmilink.com/blog/{{slug}}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/gif" href="../assets/images/common/LemmiLink.gif">
+    <link rel="shortcut icon" type="image/gif" href="../assets/images/common/LemmiLink.gif">
+    <meta name="theme-color" content="#178d72">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:locale" content="{{langCode}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{title}} - LemmiLink Blog" />
+    <meta property="og:description" content="{{description}} Découvrez les solutions LemmiLink pour votre netlinking." />
+    <meta property="og:url" content="https://lemmilink.com/blog/{{slug}}" />
+    <meta property="og:site_name" content="LemmiLink" />
+    <meta property="og:image" content="https://lemmilink.com/assets/images/common/lemmilink-og-image.jpg" />
+    <meta property="og:image:width" content="1180" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:image:type" content="image/png" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{title}} - LemmiLink Blog">
+    <meta name="twitter:description" content="{{description}} Découvrez les solutions LemmiLink pour votre netlinking.">
+    <meta name="twitter:image" content="https://lemmilink.com/assets/images/common/lemmilink-og-image.jpg">
+
+    <!-- preload head styles -->
+    <link rel="preload" href="../assets/css/fonts.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
+    <link rel="preload" href="../assets/css/swiper-bundle.min.css" as="style">
+    <link rel="preload" href="../assets/css/magic-cursor.min.css" as="style">
+
+    <!-- preload footer scripts -->
+    <link rel="preload" href="../assets/js/libs/jquery.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/scrollmagic.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/swiper-bundle.min.js" as="script">
+    <link rel="preload" href="../assets/js/libs/anime.min.js" as="script">
+    <link rel="preload" href="../assets/js/app.js" as="script">
+
+    <!-- app head for bootstrap core -->
+    <script src="../assets/js/app-head-bs.js"></script>
+
+    <!-- include uni-core components -->
+    <link rel="stylesheet" href="../assets/js/uni-core/css/uni-core.min.css">
+
+    <!-- include styles -->
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/prettify.min.css">
+    <link rel="stylesheet" href="../assets/css/magic-cursor.min.css">
+
+    <!-- include main style -->
+    <link rel="stylesheet" href="../assets/css/theme/main.min.css">
+    <link rel="stylesheet" href="../assets/css/theme/theme-two.min.css">
+
+    <!-- Mobile responsive fixes -->
+    <link rel="stylesheet" href="../assets/css/mobile-fixes.css">
+
+    <!-- include scripts -->
+    <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+
+    <style>
+        /* Header background fix */
+        .uc-navbar-container {
+            background: rgba(26, 26, 26, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
+        .uc-navbar-sticky .uc-navbar-container {
+            background: rgba(255, 255, 255, 0.98) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .blog-wrapper {
+            min-height: 100vh;
+            padding: 120px 0 60px;
+            background: linear-gradient(to bottom, #1a1a1a 0%, #2d2d2d 200px, #f8f9fa 200px);
+        }
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .article-content h1 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        .article-content h2 {
+            color: #2980b9;
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        .article-content p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #333;
+        }
+        .article-content strong { color: #e74c3c; font-weight: 600; }
+        .article-content u { text-decoration-color: #27ae60; }
+        .article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .article-content th, .article-content td {
+            padding: 1rem;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+        }
+        .article-content th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        .article-meta {
+            color: #666;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .cta-lemmilink {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+        }
+        .cta-lemmilink h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        .cta-lemmilink a {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .cta-lemmilink a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.3);
+        }
+        .article-content ul, .article-content ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        .article-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body class="uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-white overflow-x-hidden">
+
+    <!-- Header start -->
+    <header class="uc-header header-six uc-navbar-sticky-wrap z-999" data-uc-sticky="start: 1200px; animation: uc-animation-slide-top; sel-target: .uc-navbar-container; cls-active: uc-navbar-sticky; cls-inactive: uc-navbar-transparent; end: !*;">
+        <nav class="uc-navbar-container lg:mt-3 rounded-0 lg:rounded-pill uc-navbar-float ft-tertiary z-1" data-anime="translateY: [-40, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 750; delay: 0;">
+            <div class="uc-navbar-main" style="--uc-nav-height: 80px">
+                <div class="container max-w-lg lg:max-w-950px xl:max-w-xl">
+                    <div class="uc-navbar min-h-64px lg:min-h-80px px-2 lg:px-0 text-gray-900 dark:text-white" data-uc-navbar="mode: click; animation: uc-animation-slide-top-small; duration: 150;">
+                        <div class="uc-navbar-left">
+                            <div class="uc-logo">
+                                <a class="panel text-none" href="../index.html" style="margin-left: 40px;">
+                                    <img src="../assets/images/common/LemmiLink.gif" alt="LemmiLink" style="height: 55px; width: auto; border-radius: 25px;">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="uc-navbar-center">
+                            <ul class="uc-navbar-nav gap-2 xl:gap-3 d-none lg:d-flex fs-6 fw-medium" data-uc-scrollspy-nav="closest: li; offset: 40; scroll: true">
+                                <li><a href="../annonceur.html">Annonceurs</a></li>
+                                <li><a href="../editeur.html">Éditeurs</a></li>
+                                <li><a href="../agence.html">Agence</a></li>
+                                <li><a href="../tpe-pme.html">TPE/PME</a></li>
+                                <li><a href="../ninjalinking.html">NinjaLinking</a></li>
+                                <li><a href="/blog" class="text-primary">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="uc-navbar-right">
+                            <a href="https://app.lemmilink.fr/" target="_blank" class="btn btn-sm btn-outline-primary px-2 d-none lg:d-inline-flex me-2">
+                                <span>Se connecter</span>
+                            </a>
+                            <a href="https://app.lemmilink.fr/register" target="_blank" class="btn btn-sm btn-primary px-2 d-none lg:d-inline-flex">
+                                <span>Inscription</span>
+                            </a>
+                            <a class="d-block lg:d-none" href="#uc-menu-panel" data-uc-navbar-toggle-icon data-uc-toggle></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header end -->
+
+    <!-- Wrapper start -->
+    <div id="wrapper" class="wrap">
+        <div class="blog-wrapper">
+            <div class="container xl:max-w-xl">
+                <article class="article-content">
+                    <div class="article-meta">
+                        <time>{{date}}</time> | <a href="/blog" class="text-primary">Blog LemmiLink</a> - La plateforme leader du netlinking
+                    </div>
+
+                    {{content}}
+
+                    <!-- CTA LemmiLink -->
+                    <div class="cta-lemmilink">
+                        <h3>🚀 Boostez votre SEO avec LemmiLink</h3>
+                        <p>Rejoignez plus de 1500 utilisateurs satisfaits et accédez à plus de 16 000 sites partenaires premium. Profitez de nos 3 millions de pages déjà positionnées sur Google !</p>
+                        <a href="https://app.lemmilink.fr/register" target="_blank">Commencer gratuitement</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <!-- Wrapper end -->
+
+    <!-- Footer start -->
+    <footer id="uc-footer" class="uc-footer panel overflow-hidden uc-dark">
+        <div class="footer-outer pb-4 lg:pb-6 dark:bg-gray-800 dark:text-white m-2 rounded-2 lg:rounded-3">
+            <div class="uc-footer-content pt-6 lg:pt-8">
+                <div class="container xl:max-w-xl">
+                    <div class="uc-footer-inner vstack gap-4 lg:gap-6 xl:gap-8">
+                        <div class="uc-footer-widgets panel">
+                            <div class="row child-cols-6 md:child-cols col-match g-4">
+                                <div class="col-12 lg:col-6">
+                                    <div class="panel vstack items-start gap-3 xl:gap-4 lg:max-w-1/2">
+                                        <div>
+                                            <a href="../index.html" style="width: 140px">
+                                                <img src="../assets/images/common/LemmiLink.gif" alt="LemmiLink" style="height: 60px; width: auto; border-radius: 8px;">
+                                            </a>
+                                            <p class="mt-2">Plateforme de netlinking pour booster votre SEO avec des backlinks de qualité. Éditeurs, annonceurs, agences et TPE/PME.</p>
+                                            <p class="fs-6 fw-medium mt-2">
+                                                <i class="fas fa-envelope icon icon-1"></i>
+                                                <a href="mailto:contact@lemmilink.com" class="text-primary">contact@lemmilink.com</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <ul class="nav-y gap-2 fw-medium">
+                                        <li class="fs-7 text-uppercase dark:text-gray-300">Services</li>
+                                        <li><a href="../annonceur.html">Annonceurs</a></li>
+                                        <li><a href="../editeur.html">Éditeurs</a></li>
+                                        <li><a href="../agence.html">Agences SEO</a></li>
+                                        <li><a href="../tpe-pme.html">TPE/PME</a></li>
+                                        <li><a href="../ninjalinking.html">NinjaLinking</a></li>
+                                        <li><a href="../index.html#pricing">Tarifs</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="nav-y gap-2 fw-medium">
+                                        <li class="fs-7 text-uppercase dark:text-gray-300">Informations</li>
+                                        <li><a href="../index.html#faq">FAQ</a></li>
+                                        <li><a href="/blog">Blog</a></li>
+                                        <li><a href="https://calendly.com/contact-e16a/30min">Contact</a></li>
+                                        <li><a href="mailto:contact@lemmilink.com">Support</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uc-footer-bottom panel vstack lg:hstack gap-4 justify-between text-center pt-4 lg:pt-6 border-top dark:text-white">
+                            <div class="vstack gap-2 lg:items-start">
+                                <p class="opacity-60">© 2025 LemmiLink. Tous droits réservés par LemmiLink</p>
+                            </div>
+                            <ul class="nav-x justify-center gap-2 text-gray-300">
+                                <li><a href="https://www.linkedin.com/company/lemmilink" target="_blank"><i class="fab fa-linkedin-in icon icon-2"></i></a></li>
+                                <li><a href="https://www.facebook.com/lemmilink" target="_blank"><i class="fab fa-facebook-f icon icon-2"></i></a></li>
+                                <li><a href="https://twitter.com/lemmilink" target="_blank"><i class="fab fa-x-twitter icon icon-2"></i></a></li>
+                                <li><a href="https://www.youtube.com/@lemmilink" target="_blank"><i class="fab fa-youtube icon icon-2"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- include jquery & bootstrap js -->
+    <script defer src="../assets/js/libs/jquery.min.js"></script>
+    <script defer src="../assets/js/libs/scrollmagic.min.js"></script>
+    <script defer src="../assets/js/libs/swiper-bundle.min.js"></script>
+    <script defer src="../assets/js/libs/anime.min.js"></script>
+    <script defer src="../assets/js/core/magic-cursor.js"></script>
+    <script defer src="../assets/js/helpers/data-attr-helper.js"></script>
+    <script defer src="../assets/js/helpers/swiper-helper.js"></script>
+    <script defer src="../assets/js/helpers/anime-helper.js"></script>
+    <script defer src="../assets/js/uikit-components-bs.js"></script>
+    <script defer src="../assets/js/app.js"></script>
+</body>
+</html>

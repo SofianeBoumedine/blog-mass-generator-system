@@ -1,0 +1,51 @@
+🔍 Analyse de tous les layouts...
+
+📁 30 layouts trouvés
+
+═══════════════════════════════════════════════════════════════
+📊 RAPPORT PAR LAYOUT
+═══════════════════════════════════════════════════════════════
+
+✅ layout-1-hero.html - 100 placeholders (tous gérés)
+✅ layout-10-magazine.html - 71 placeholders (tous gérés)
+✅ layout-11-neumorphism.html - 65 placeholders (tous gérés)
+✅ layout-12-parallax.html - 74 placeholders (tous gérés)
+✅ layout-13-fullscreen.html - 69 placeholders (tous gérés)
+✅ layout-14-asymmetric.html - 71 placeholders (tous gérés)
+✅ layout-15-retrowave.html - 69 placeholders (tous gérés)
+✅ layout-16-cyberpunk.html - 69 placeholders (tous gérés)
+✅ layout-17-creative.html - 69 placeholders (tous gérés)
+✅ layout-18-corporate.html - 69 placeholders (tous gérés)
+✅ layout-19-vintage.html - 69 placeholders (tous gérés)
+✅ layout-2-split.html - 59 placeholders (tous gérés)
+✅ layout-20-modern.html - 69 placeholders (tous gérés)
+✅ layout-3-cards.html - 58 placeholders (tous gérés)
+✅ layout-4-sidebar.html - 66 placeholders (tous gérés)
+✅ layout-5-minimal.html - 74 placeholders (tous gérés)
+✅ layout-6-dark.html - 71 placeholders (tous gérés)
+✅ layout-7-gradient.html - 67 placeholders (tous gérés)
+✅ layout-8-glass.html - 75 placeholders (tous gérés)
+✅ layout-9-brutalist.html - 73 placeholders (tous gérés)
+✅ layout-agency-creative-enhanced.html - 32 placeholders (tous gérés)
+✅ layout-agency-creative.html - 24 placeholders (tous gérés)
+✅ layout-ecommerce-premium.html - 30 placeholders (tous gérés)
+✅ layout-pets-cute.html - 18 placeholders (tous gérés)
+✅ layout-professional.html - 101 placeholders (tous gérés)
+✅ layout-saas-modern-enhanced.html - 30 placeholders (tous gérés)
+✅ layout-saas-modern.html - 26 placeholders (tous gérés)
+✅ layout-simple-bootstrap.html - 52 placeholders (tous gérés)
+✅ layout-simple-bulma.html - 52 placeholders (tous gérés)
+✅ layout-simple-tailwind.html - 52 placeholders (tous gérés)
+
+═══════════════════════════════════════════════════════════════
+📈 STATISTIQUES GLOBALES
+═══════════════════════════════════════════════════════════════
+
+Layouts analysés: 30
+Layouts OK: 30
+Layouts avec problèmes: 0
+Placeholders uniques non gérés: 0
+
+═══════════════════════════════════════════════════════════════
+
+✅ SUCCÈS: Tous les placeholders sont gérés !

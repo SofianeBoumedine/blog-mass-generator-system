@@ -1,0 +1,89 @@
+{
+  "structures": {
+    "service": {
+      "pages": ["home", "services", "pricing", "about", "contact", "blog"],
+      "navigation": "standard",
+      "features": ["cta", "testimonials", "faq"],
+      "tone": "professional"
+    },
+    "agency": {
+      "pages": ["home", "services", "portfolio", "team", "about", "contact", "blog"],
+      "navigation": "modern",
+      "features": ["portfolio", "team", "process"],
+      "tone": "creative"
+    },
+    "saas": {
+      "pages": ["home", "features", "pricing", "docs", "about", "contact", "blog"],
+      "navigation": "tech",
+      "features": ["demo", "integrations", "api"],
+      "tone": "technical"
+    },
+    "consultant": {
+      "pages": ["home", "expertise", "methodology", "about", "contact", "blog"],
+      "navigation": "minimal",
+      "features": ["case-studies", "certifications", "booking"],
+      "tone": "expert"
+    },
+    "local": {
+      "pages": ["home", "services", "tarifs", "apropos", "contact", "blog"],
+      "navigation": "simple",
+      "features": ["map", "hours", "reviews"],
+      "tone": "friendly"
+    },
+    "elearning": {
+      "pages": ["home", "courses", "pricing", "instructors", "about", "contact", "blog"],
+      "navigation": "educational",
+      "features": ["courses", "certificates", "testimonials"],
+      "tone": "educational"
+    },
+    "portfolio": {
+      "pages": ["home", "work", "services", "about", "contact", "blog"],
+      "navigation": "creative",
+      "features": ["gallery", "skills", "timeline"],
+      "tone": "creative"
+    },
+    "corporate": {
+      "pages": ["home", "solutions", "industries", "company", "careers", "contact", "blog"],
+      "navigation": "corporate",
+      "features": ["stats", "partners", "whitepaper"],
+      "tone": "corporate"
+    }
+  },
+  "pageConfigurations": {
+    "home": {
+      "sections": ["hero", "features", "benefits", "cta", "testimonials"],
+      "minWords": 1500,
+      "maxWords": 2500
+    },
+    "services": {
+      "sections": ["intro", "service-list", "process", "why-us", "cta"],
+      "minWords": 2000,
+      "maxWords": 3000
+    },
+    "pricing": {
+      "sections": ["intro", "pricing-table", "features-comparison", "faq", "cta"],
+      "minWords": 1000,
+      "maxWords": 1500
+    },
+    "about": {
+      "sections": ["story", "mission", "values", "team", "achievements"],
+      "minWords": 1200,
+      "maxWords": 2000
+    },
+    "contact": {
+      "sections": ["form", "info", "map", "faq"],
+      "minWords": 500,
+      "maxWords": 800
+    },
+    "portfolio": {
+      "sections": ["intro", "gallery", "case-studies", "process", "cta"],
+      "minWords": 1500,
+      "maxWords": 2500
+    },
+    "lexique": {
+      "sections": ["intro", "glossary"],
+      "minWords": 2000,
+      "maxWords": 4000
+    }
+  }
+}

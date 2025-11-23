@@ -1,0 +1,369 @@
+<div class="pricing-page">
+    <!-- Hero Section -->
+    <div class="hero-section" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 80px 0; text-align: center; margin-bottom: 80px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 25px; font-weight: 700;">Nos Tarifs</h1>
+            <p style="font-size: 1.3rem; opacity: 0.95; max-width: 600px; margin: 0 auto; line-height: 1.6;">Des prix transparents et adaptés à tous les besoins</p>
+        </div>
+    </div>
+
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+
+        <!-- Pricing Toggle -->
+        <div style="text-align: center; margin-bottom: 60px;">
+            <div style="display: inline-flex; background: #f8f9fa; border-radius: 50px; padding: 5px; position: relative;">
+                <button id="monthlyBtn" class="pricing-toggle active" style="background: var(--primary); color: white; border: none; padding: 12px 30px; border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.3s;">Mensuel</button>
+                <button id="annualBtn" class="pricing-toggle" style="background: transparent; color: #666; border: none; padding: 12px 30px; border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.3s;">Annuel</button>
+            </div>
+            <p style="color: #666; margin-top: 15px; font-size: 0.9rem;">
+                <span style="color: var(--primary); font-weight: 600;">-20% sur les plans annuels</span>
+            </p>
+        </div>
+
+        <!-- Pricing Plans -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 80px;">
+
+            <!-- Starter Plan -->
+            <div class="pricing-card" style="background: white; border: 2px solid #e9ecef; border-radius: 20px; padding: 40px; text-align: center; position: relative; transition: all 0.3s;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 10px; color: var(--primary);">Starter</h3>
+                <p style="color: #666; margin-bottom: 30px;">Parfait pour débuter</p>
+
+                <div class="price-display" style="margin-bottom: 30px;">
+                    <div class="monthly-price" style="display: block;">
+                        <span style="font-size: 3rem; font-weight: 700; color: var(--primary);">{price_starter_monthly}</span>
+                        <span style="color: #666; font-size: 1rem;">€/mois</span>
+                    </div>
+                    <div class="annual-price" style="display: none;">
+                        <span style="font-size: 3rem; font-weight: 700; color: var(--primary);">{price_starter_annual}</span>
+                        <span style="color: #666; font-size: 1rem;">€/mois</span>
+                        <div style="color: #28a745; font-size: 0.9rem; font-weight: 600; margin-top: 5px;">Économisez 20%</div>
+                    </div>
+                </div>
+
+                <ul style="list-style: none; padding: 0; margin-bottom: 40px; text-align: left;">
+                    <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        {starter_feature_1}
+                    </li>
+                    <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        {starter_feature_2}
+                    </li>
+                    <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        {starter_feature_3}
+                    </li>
+                    <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        {starter_feature_4}
+                    </li>
+                    <li style="padding: 12px 0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        Support email
+                    </li>
+                </ul>
+
+                <a href="/contact.html" style="background: var(--primary); color: white; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s; width: 100%; box-sizing: border-box;">
+                    Commencer
+                </a>
+            </div>
+
+            <!-- Professional Plan -->
+            <div class="pricing-card popular" style="background: white; border: 3px solid var(--primary); border-radius: 20px; padding: 40px; text-align: center; position: relative; transition: all 0.3s; transform: scale(1.05);">
+                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 8px 25px; border-radius: 20px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Populaire</div>
+
+                <h3 style="font-size: 1.5rem; margin-bottom: 10px; color: var(--primary);">Professional</h3>
+                <p style="color: #666; margin-bottom: 30px;">Pour les entreprises</p>
+
+                <div class="price-display" style="margin-bottom: 30px;">
+                    <div class="monthly-price" style="display: block;">
+                        <span style="font-size: 3rem; font-weight: 700; color: var(--primary);">{price_professional_monthly}</span>
+                        <span style="color: #666; font-size: 1rem;">€/mois</span>
+                    </div>
+                    <div class="annual-price" style="display: none;">
+                        <span style="font-size: 3rem; font-weight: 700; color: var(--primary);">{price_professional_annual}</span>
+                        <span style="color: #666; font-size: 1rem;">€/mois</span>
+                        <div style="color: #28a745; font-size: 0.9rem; font-weight: 600; margin-top: 5px;">Économisez 20%</div>
+                    </div>
+                </div>
+
+                <ul style="list-style: none; padding: 0; margin-bottom: 40px; text-align: left;">
+                    <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        Tout du plan Starter
+                    </li>
+                    <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        {professional_feature_1}
+                    </li>
+                    <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        {professional_feature_2}
+                    </li>
+                    <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        {professional_feature_3}
+                    </li>
+                    <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        {professional_feature_4}
+                    </li>
+                    <li style="padding: 12px 0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        Support prioritaire
+                    </li>
+                </ul>
+
+                <a href="/contact.html" style="background: var(--primary); color: white; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s; width: 100%; box-sizing: border-box;">
+                    Choisir ce plan
+                </a>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="pricing-card" style="background: white; border: 2px solid #e9ecef; border-radius: 20px; padding: 40px; text-align: center; position: relative; transition: all 0.3s;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 10px; color: var(--primary);">Enterprise</h3>
+                <p style="color: #666; margin-bottom: 30px;">Solutions sur mesure</p>
+
+                <div class="price-display" style="margin-bottom: 30px;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary); margin-bottom: 10px;">Sur devis</div>
+                    <div style="color: #666; font-size: 0.9rem;">Tarification personnalisée</div>
+                </div>
+
+                <ul style="list-style: none; padding: 0; margin-bottom: 40px; text-align: left;">
+                    <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        Tout des plans précédents
+                    </li>
+                    <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        {enterprise_feature_1}
+                    </li>
+                    <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        {enterprise_feature_2}
+                    </li>
+                    <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        {enterprise_feature_3}
+                    </li>
+                    <li style="padding: 12px 0; border-bottom: 1px solid #f0f0f0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        {enterprise_feature_4}
+                    </li>
+                    <li style="padding: 12px 0; position: relative; padding-left: 25px;">
+                        <span style="position: absolute; left: 0; color: var(--primary);">✓</span>
+                        Account manager dédié
+                    </li>
+                </ul>
+
+                <a href="/contact.html" style="background: var(--primary); color: white; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-weight: 600; display: inline-block; transition: all 0.3s; width: 100%; box-sizing: border-box;">
+                    Nous contacter
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Feature Comparison -->
+        <div class="comparison-section" style="margin-bottom: 80px;">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--primary);">Comparaison Détaillée</h2>
+
+            <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; min-width: 600px;">
+                        <thead>
+                            <tr style="background: #f8f9fa;">
+                                <th style="padding: 20px; text-align: left; font-weight: 600; color: #333; border-bottom: 2px solid #e9ecef;">Fonctionnalités</th>
+                                <th style="padding: 20px; text-align: center; font-weight: 600; color: var(--primary); border-bottom: 2px solid #e9ecef;">Starter</th>
+                                <th style="padding: 20px; text-align: center; font-weight: 600; color: var(--primary); border-bottom: 2px solid #e9ecef; background: rgba(var(--primary-rgb, 0, 123, 255), 0.1);">Professional</th>
+                                <th style="padding: 20px; text-align: center; font-weight: 600; color: var(--primary); border-bottom: 2px solid #e9ecef;">Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; color: #333;">{comparison_feature_1}</td>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; text-align: center; color: var(--primary); font-weight: 600;">✓</td>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; text-align: center; color: var(--primary); font-weight: 600; background: rgba(var(--primary-rgb, 0, 123, 255), 0.05);">✓</td>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; text-align: center; color: var(--primary); font-weight: 600;">✓</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; color: #333;">{comparison_feature_2}</td>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; text-align: center; color: #ccc;">✗</td>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; text-align: center; color: var(--primary); font-weight: 600; background: rgba(var(--primary-rgb, 0, 123, 255), 0.05);">✓</td>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; text-align: center; color: var(--primary); font-weight: 600;">✓</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; color: #333;">{comparison_feature_3}</td>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; text-align: center; color: #666;">Basique</td>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; text-align: center; color: var(--primary); font-weight: 600; background: rgba(var(--primary-rgb, 0, 123, 255), 0.05);">Avancé</td>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; text-align: center; color: var(--primary); font-weight: 600;">Premium</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; color: #333;">{comparison_feature_4}</td>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; text-align: center; color: #666;">Email</td>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; text-align: center; color: var(--primary); font-weight: 600; background: rgba(var(--primary-rgb, 0, 123, 255), 0.05);">Email + Chat</td>
+                                <td style="padding: 15px 20px; border-bottom: 1px solid #f0f0f0; text-align: center; color: var(--primary); font-weight: 600;">24/7 Dédié</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px 20px; color: #333;">{comparison_feature_5}</td>
+                                <td style="padding: 15px 20px; text-align: center; color: #ccc;">✗</td>
+                                <td style="padding: 15px 20px; text-align: center; color: #ccc; background: rgba(var(--primary-rgb, 0, 123, 255), 0.05);">✗</td>
+                                <td style="padding: 15px 20px; text-align: center; color: var(--primary); font-weight: 600;">✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section" style="background: #f8f9fa; padding: 80px 40px; border-radius: 20px; margin-bottom: 80px;">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--primary);">Questions Fréquentes</h2>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+
+                <div class="faq-item" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                        <span>Puis-je changer de plan à tout moment ?</span>
+                        <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                    </div>
+                    <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                        Oui, vous pouvez upgrader ou downgrader votre plan à tout moment. Les changements prennent effet immédiatement et la facturation est ajustée au prorata.
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                        <span>Y a-t-il une période d'essai gratuite ?</span>
+                        <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                    </div>
+                    <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                        Nous proposons une période d'essai de 14 jours gratuite sur tous nos plans. Aucune carte de crédit n'est requise pour commencer.
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                        <span>Comment fonctionne la facturation annuelle ?</span>
+                        <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                    </div>
+                    <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                        Avec la facturation annuelle, vous bénéficiez de 20% de réduction. Le montant total est facturé en une seule fois au début de la période de 12 mois.
+                    </div>
+                </div>
+
+                <div class="faq-item" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                        <span>Puis-je annuler mon abonnement ?</span>
+                        <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                    </div>
+                    <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                        Vous pouvez annuler votre abonnement à tout moment. Votre service reste actif jusqu'à la fin de votre période de facturation en cours.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Money Back Guarantee -->
+        <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 60px 40px; border-radius: 20px; text-align: center; margin-bottom: 80px;">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div style="background: rgba(255,255,255,0.2); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 25px;">🛡️</div>
+                <h2 style="font-size: 2.2rem; margin-bottom: 20px;">Garantie Satisfait ou Remboursé</h2>
+                <p style="font-size: 1.1rem; opacity: 0.95; line-height: 1.6; margin-bottom: 30px;">
+                    Essayez nos services sans risque. Si vous n'êtes pas entièrement satisfait dans les 30 premiers jours, nous vous remboursons intégralement.
+                </p>
+                <div style="background: rgba(255,255,255,0.2); padding: 15px 30px; border-radius: 50px; display: inline-block; font-weight: 600;">
+                    ✓ 30 jours pour tester ✓ Remboursement intégral ✓ Sans engagement
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        {cta_component}
+
+    </div>
+</div>
+
+<script>
+// Toggle pricing
+document.addEventListener('DOMContentLoaded', function() {
+    const monthlyBtn = document.getElementById('monthlyBtn');
+    const annualBtn = document.getElementById('annualBtn');
+    const monthlyPrices = document.querySelectorAll('.monthly-price');
+    const annualPrices = document.querySelectorAll('.annual-price');
+
+    monthlyBtn.addEventListener('click', function() {
+        monthlyBtn.classList.add('active');
+        annualBtn.classList.remove('active');
+        monthlyBtn.style.background = 'var(--primary)';
+        monthlyBtn.style.color = 'white';
+        annualBtn.style.background = 'transparent';
+        annualBtn.style.color = '#666';
+
+        monthlyPrices.forEach(price => price.style.display = 'block');
+        annualPrices.forEach(price => price.style.display = 'none');
+    });
+
+    annualBtn.addEventListener('click', function() {
+        annualBtn.classList.add('active');
+        monthlyBtn.classList.remove('active');
+        annualBtn.style.background = 'var(--primary)';
+        annualBtn.style.color = 'white';
+        monthlyBtn.style.background = 'transparent';
+        monthlyBtn.style.color = '#666';
+
+        annualPrices.forEach(price => price.style.display = 'block');
+        monthlyPrices.forEach(price => price.style.display = 'none');
+    });
+});
+
+// FAQ Toggle
+function toggleFaq(element) {
+    const answer = element.nextElementSibling;
+    const icon = element.querySelector('.faq-icon');
+
+    if (answer.style.display === 'none' || answer.style.display === '') {
+        answer.style.display = 'block';
+        icon.textContent = '−';
+        icon.style.transform = 'rotate(180deg)';
+    } else {
+        answer.style.display = 'none';
+        icon.textContent = '+';
+        icon.style.transform = 'rotate(0deg)';
+    }
+}
+</script>
+
+<style>
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.pricing-card.popular {
+    box-shadow: 0 20px 40px rgba(var(--primary-rgb, 0, 123, 255), 0.2);
+}
+
+.pricing-card.popular:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .pricing-page .hero-section h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .pricing-page .pricing-card.popular {
+        transform: none !important;
+    }
+
+    .pricing-page .comparison-section table {
+        font-size: 0.9rem;
+    }
+
+    .pricing-page .comparison-section th,
+    .pricing-page .comparison-section td {
+        padding: 10px 15px !important;
+    }
+}
+</style>

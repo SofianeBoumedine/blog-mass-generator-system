@@ -1,0 +1,604 @@
+🔍 VÉRIFICATION DÉTAILLÉE DE CHAQUE LAYOUT
+
+📁 30 layouts à vérifier
+
+════════════════════════════════════════════════════════════════════════════════
+
+[1/30] layout-1-hero.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 100
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections, stats, testimonials, trust
+   • benefits: 3 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 8 placeholder(s)
+   • cta: 6 placeholder(s)
+   • features: 6 placeholder(s)
+   • footer: 20 placeholder(s)
+   • framework: 4 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 11 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 3 placeholder(s)
+   • stats: 6 placeholder(s)
+   • testimonials: 7 placeholder(s)
+   • trust: 5 placeholder(s)
+
+[2/30] layout-10-magazine.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 71
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, misc, navigation, newsletter, sections
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 2 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • misc: 2 placeholder(s)
+   • navigation: 12 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 7 placeholder(s)
+
+[3/30] layout-11-neumorphism.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 65
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, misc, navigation, newsletter, sections, stats
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • misc: 2 placeholder(s)
+   • navigation: 2 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 7 placeholder(s)
+   • stats: 1 placeholder(s)
+
+[4/30] layout-12-parallax.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 74
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, misc, navigation, newsletter, sections, stats
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • misc: 3 placeholder(s)
+   • navigation: 12 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 5 placeholder(s)
+   • stats: 1 placeholder(s)
+
+[5/30] layout-13-fullscreen.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 69
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 11 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 5 placeholder(s)
+
+[6/30] layout-14-asymmetric.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 71
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 11 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 7 placeholder(s)
+
+[7/30] layout-15-retrowave.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 69
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 11 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 5 placeholder(s)
+
+[8/30] layout-16-cyberpunk.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 69
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 11 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 5 placeholder(s)
+
+[9/30] layout-17-creative.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 69
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 11 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 5 placeholder(s)
+
+[10/30] layout-18-corporate.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 69
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 11 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 5 placeholder(s)
+
+[11/30] layout-19-vintage.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 69
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 11 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 5 placeholder(s)
+
+[12/30] layout-2-split.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 59
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections, trust
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 4 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 4 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 2 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 3 placeholder(s)
+   • trust: 1 placeholder(s)
+
+[13/30] layout-20-modern.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 69
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 11 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 5 placeholder(s)
+
+[14/30] layout-3-cards.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 58
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 4 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 4 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 2 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 3 placeholder(s)
+
+[15/30] layout-4-sidebar.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 66
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 11 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 3 placeholder(s)
+
+[16/30] layout-5-minimal.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 74
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections
+   • branding: 1 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 4 placeholder(s)
+   • features: 5 placeholder(s)
+   • footer: 20 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 3 placeholder(s)
+   • navigation: 13 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 3 placeholder(s)
+
+[17/30] layout-6-dark.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 71
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 4 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 12 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 7 placeholder(s)
+
+[18/30] layout-7-gradient.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 67
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, misc, navigation, newsletter, sections, stats
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 3 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 20 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 8 placeholder(s)
+   • meta: 2 placeholder(s)
+   • misc: 2 placeholder(s)
+   • navigation: 2 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 7 placeholder(s)
+   • stats: 1 placeholder(s)
+
+[19/30] layout-8-glass.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 75
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, misc, navigation, newsletter, sections, stats
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • misc: 2 placeholder(s)
+   • navigation: 12 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 7 placeholder(s)
+   • stats: 1 placeholder(s)
+
+[20/30] layout-9-brutalist.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 73
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, contact, cta, features, footer, framework, hero, legal, meta, misc, navigation, newsletter, sections
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • misc: 1 placeholder(s)
+   • navigation: 12 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 7 placeholder(s)
+
+[21/30] layout-agency-creative-enhanced.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 32
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, cta, features, footer, framework, hero, legal, meta, navigation, sections
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 3 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 2 placeholder(s)
+   • framework: 1 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 4 placeholder(s)
+   • meta: 3 placeholder(s)
+   • navigation: 1 placeholder(s)
+   • sections: 6 placeholder(s)
+
+[22/30] layout-agency-creative.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 24
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, cta, features, footer, hero, legal, meta, navigation, sections
+   • benefits: 1 placeholder(s)
+   • branding: 1 placeholder(s)
+   • cta: 3 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 3 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 3 placeholder(s)
+   • sections: 5 placeholder(s)
+
+[23/30] layout-ecommerce-premium.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 30
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, cta, features, footer, hero, legal, meta, misc, newsletter, sections
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 3 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 1 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 6 placeholder(s)
+   • meta: 3 placeholder(s)
+   • misc: 1 placeholder(s)
+   • newsletter: 1 placeholder(s)
+   • sections: 3 placeholder(s)
+
+[24/30] layout-pets-cute.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 18
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: branding, cta, features, footer, hero, meta, misc, navigation, sections
+   • branding: 1 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 1 placeholder(s)
+   • footer: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • meta: 2 placeholder(s)
+   • misc: 1 placeholder(s)
+   • navigation: 1 placeholder(s)
+   • sections: 3 placeholder(s)
+
+[25/30] layout-professional.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 101
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, cta, features, footer, framework, hero, legal, meta, navigation, sections, stats, testimonials, trust
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 5 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 8 placeholder(s)
+   • footer: 26 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 3 placeholder(s)
+   • legal: 6 placeholder(s)
+   • meta: 3 placeholder(s)
+   • navigation: 11 placeholder(s)
+   • sections: 6 placeholder(s)
+   • stats: 8 placeholder(s)
+   • testimonials: 12 placeholder(s)
+   • trust: 3 placeholder(s)
+
+[26/30] layout-saas-modern-enhanced.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 30
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, colors, cta, features, footer, framework, hero, legal, meta, navigation, sections
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • colors: 3 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 1 placeholder(s)
+   • framework: 1 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 4 placeholder(s)
+   • meta: 3 placeholder(s)
+   • navigation: 1 placeholder(s)
+   • sections: 5 placeholder(s)
+
+[27/30] layout-saas-modern.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 26
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: benefits, branding, cta, features, footer, hero, legal, meta, navigation, sections
+   • benefits: 1 placeholder(s)
+   • branding: 2 placeholder(s)
+   • cta: 4 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 1 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 4 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 3 placeholder(s)
+   • sections: 5 placeholder(s)
+
+[28/30] layout-simple-bootstrap.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 52
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections
+   • branding: 1 placeholder(s)
+   • colors: 3 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 1 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 2 placeholder(s)
+
+[29/30] layout-simple-bulma.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 52
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections
+   • branding: 1 placeholder(s)
+   • colors: 3 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 1 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 2 placeholder(s)
+
+[30/30] layout-simple-tailwind.html
+────────────────────────────────────────────────────────────────────────────────
+📊 Total placeholders: 52
+✅ OK: Tous les placeholders sont gérés
+📦 Catégories utilisées: branding, colors, contact, cta, features, footer, framework, hero, legal, meta, navigation, newsletter, sections
+   • branding: 1 placeholder(s)
+   • colors: 3 placeholder(s)
+   • contact: 6 placeholder(s)
+   • cta: 5 placeholder(s)
+   • features: 2 placeholder(s)
+   • footer: 16 placeholder(s)
+   • framework: 2 placeholder(s)
+   • hero: 2 placeholder(s)
+   • legal: 7 placeholder(s)
+   • meta: 2 placeholder(s)
+   • navigation: 1 placeholder(s)
+   • newsletter: 3 placeholder(s)
+   • sections: 2 placeholder(s)
+
+════════════════════════════════════════════════════════════════════════════════
+📈 RÉSUMÉ FINAL
+
+Layouts analysés: 30
+Layouts OK: 30
+Layouts avec problèmes: 0
+
+✅ PARFAIT: Tous les placeholders de tous les layouts sont gérés !
+✅ 180 placeholders uniques reconnus dans le système

@@ -1,0 +1,24 @@
+{
+  "api": {
+    "provider": "perplexity",
+    "key": "YOUR_API_KEY_HERE",
+    "model": "llama-3.1-sonar-large-128k-online"
+  },
+  "generation": {
+    "articlesPerRun": 10,
+    "delayBetweenArticles": 2000,
+    "outputDirectory": "./blog"
+  },
+  "templates": {
+    "default": "templates/template.html"
+  },
+  "keywords": {
+    "file": "keywords/keywords.txt"
+  },
+  "seo": {
+    "minWords": 1500,
+    "maxWords": 3000,
+    "siteName": "Your Site Name",
+    "siteUrl": "https://yoursite.com"
+  }
+}

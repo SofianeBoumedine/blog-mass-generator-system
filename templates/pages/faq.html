@@ -1,0 +1,331 @@
+<div class="faq-page">
+    <!-- Hero Section -->
+    <div class="hero-section" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 80px 0; text-align: center; margin-bottom: 80px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 25px; font-weight: 700;">Questions Fréquentes</h1>
+            <p style="font-size: 1.3rem; opacity: 0.95; max-width: 600px; margin: 0 auto; line-height: 1.6;">Trouvez rapidement les réponses à vos questions</p>
+        </div>
+    </div>
+
+    <div style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
+
+        <!-- Search Bar -->
+        <div style="text-align: center; margin-bottom: 60px;">
+            <div style="position: relative; max-width: 500px; margin: 0 auto;">
+                <input type="text" id="faqSearch" placeholder="Rechercher dans la FAQ..." style="width: 100%; padding: 18px 25px 18px 55px; border: 2px solid #e9ecef; border-radius: 50px; font-size: 16px; outline: none; transition: border-color 0.3s;">
+                <div style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: #666; font-size: 1.2rem;">🔍</div>
+            </div>
+        </div>
+
+        <!-- FAQ Categories -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 60px;">
+
+            <button class="category-btn active" data-category="all" style="background: var(--primary); color: white; border: none; padding: 15px 25px; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s;">
+                Toutes les questions
+            </button>
+
+            <button class="category-btn" data-category="general" style="background: #f8f9fa; color: #666; border: none; padding: 15px 25px; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s;">
+                Questions générales
+            </button>
+
+            <button class="category-btn" data-category="pricing" style="background: #f8f9fa; color: #666; border: none; padding: 15px 25px; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s;">
+                Tarifs & Facturation
+            </button>
+
+            <button class="category-btn" data-category="technical" style="background: #f8f9fa; color: #666; border: none; padding: 15px 25px; border-radius: 10px; font-weight: 600; cursor: pointer; transition: all 0.3s;">
+                Support technique
+            </button>
+
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="faq-container">
+
+            <!-- General Questions -->
+            <div class="faq-item" data-category="general" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                    <span>Qu'est-ce que {brand_name} exactement ?</span>
+                    <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                    {brand_name} est {company_description}. Nous accompagnons nos clients depuis {company_founding_year} en proposant des solutions innovantes et personnalisées pour répondre à leurs besoins spécifiques.
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="general" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                    <span>Dans quelles régions intervenez-vous ?</span>
+                    <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                    Nous intervenons principalement en France, avec une expertise particulière dans les grandes métropoles. Nous proposons également des services à distance pour certaines prestations. N'hésitez pas à nous contacter pour discuter de votre projet spécifique.
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="general" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                    <span>Comment commencer un projet avec vous ?</span>
+                    <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                    C'est très simple ! Contactez-nous via notre formulaire ou par téléphone. Nous organisons un premier rendez-vous gratuit pour comprendre vos besoins et vous proposer une solution adaptée. Ensuite, nous établissons un devis détaillé et, si vous acceptez, nous démarrons le projet selon le planning convenu.
+                </div>
+            </div>
+
+            <!-- Pricing Questions -->
+            <div class="faq-item" data-category="pricing" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                    <span>Comment sont calculés vos tarifs ?</span>
+                    <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                    Nos tarifs sont basés sur plusieurs facteurs : la complexité du projet, le temps nécessaire, les ressources mobilisées et la valeur apportée. Nous proposons des tarifs transparents avec des devis détaillés. Pour les projets récurrents, nous offrons des tarifs préférentiels.
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="pricing" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                    <span>Proposez-vous des facilités de paiement ?</span>
+                    <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                    Oui, nous proposons plusieurs options de paiement : paiement comptant avec remise, paiement en plusieurs fois sans frais, ou paiement mensuel pour les contrats d'abonnement. Nous adaptons nos conditions à votre situation et à la nature du projet.
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="pricing" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                    <span>Y a-t-il des frais cachés ?</span>
+                    <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                    Absolument pas ! Nous pratiquons une politique de transparence totale. Tous nos devis sont détaillés avec l'ensemble des coûts. Aucun frais supplémentaire ne sera ajouté sans votre accord préalable. En cas de modification du projet en cours, nous vous présentons un avenant clair avant toute facturation.
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="pricing" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                    <span>Puis-je obtenir un devis gratuit ?</span>
+                    <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                    Bien sûr ! Nous offrons des devis gratuits et sans engagement pour tous nos services. Il vous suffit de nous contacter en décrivant votre projet. Nous reviendrons vers vous rapidement avec une proposition détaillée et personnalisée.
+                </div>
+            </div>
+
+            <!-- Technical Questions -->
+            <div class="faq-item" data-category="technical" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                    <span>Quel est votre processus de travail ?</span>
+                    <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                    Notre processus est structuré en 4 étapes : 1) Analyse de vos besoins et définition des objectifs, 2) Conception et planification détaillée, 3) Réalisation avec points de validation réguliers, 4) Livraison et accompagnement post-projet. Vous êtes impliqué à chaque étape pour garantir un résultat conforme à vos attentes.
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="technical" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                    <span>Combien de temps prend un projet type ?</span>
+                    <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                    La durée varie selon la complexité du projet. Un projet simple peut prendre 2-4 semaines, tandis qu'un projet complexe peut nécessiter 2-6 mois. Nous établissons un planning précis dès le début et nous nous engageons à respecter les délais convenus. En cas d'urgence, nous proposons des options de livraison accélérée.
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="technical" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                    <span>Proposez-vous une maintenance après livraison ?</span>
+                    <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                    Oui, nous proposons différents niveaux de maintenance : support de base inclus pendant 3 mois, contrats de maintenance étendue, et support à la demande. Nous restons disponibles pour toute question ou amélioration future. Notre objectif est de vous accompagner sur le long terme.
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="technical" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                    <span>Comment gérez-vous la confidentialité des projets ?</span>
+                    <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                    La confidentialité est une priorité absolue. Nous signons systématiquement des accords de confidentialité (NDA) avant tout échange d'informations sensibles. Nos équipes sont formées aux bonnes pratiques de sécurité et nous utilisons des outils sécurisés pour tous nos échanges et stockages de données.
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="general" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                    <span>Travaillez-vous avec des freelances ou avez-vous une équipe interne ?</span>
+                    <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                    Nous avons une équipe interne d'experts permanents, complétée par un réseau de partenaires spécialisés pour des compétences spécifiques. Cette approche nous permet de garantir la qualité et la continuité du service tout en ayant accès aux meilleures expertises du marché.
+                </div>
+            </div>
+
+            <div class="faq-item" data-category="general" style="background: white; border-radius: 15px; margin-bottom: 20px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div class="faq-question" style="padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: var(--primary);" onclick="toggleFaq(this)">
+                    <span>Proposez-vous des formations ?</span>
+                    <span class="faq-icon" style="font-size: 1.2rem; transition: transform 0.3s;">+</span>
+                </div>
+                <div class="faq-answer" style="padding: 0 25px 25px; color: #666; line-height: 1.6; display: none;">
+                    Oui, nous proposons des formations sur mesure pour vos équipes. Cela peut être inclus dans le projet principal ou proposé en complément. Nous adaptons le contenu et le format aux besoins de votre organisation : formations présentielles, à distance, ou supports documentaires.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Still have questions -->
+        <div style="background: #f8f9fa; padding: 60px 40px; border-radius: 20px; text-align: center; margin-top: 80px; margin-bottom: 80px;">
+            <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: var(--primary);">Vous ne trouvez pas votre réponse ?</h2>
+            <p style="color: #666; margin-bottom: 30px; font-size: 1.1rem; line-height: 1.6;">Notre équipe est là pour répondre à toutes vos questions spécifiques</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 600px; margin: 0 auto 40px;">
+
+                <a href="/contact.html" style="background: var(--primary); color: white; padding: 18px 30px; border-radius: 10px; text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-block;">
+                    Nous contacter
+                </a>
+
+                <a href="tel:+33123456789" style="background: white; color: var(--primary); border: 2px solid var(--primary); padding: 16px 30px; border-radius: 10px; text-decoration: none; font-weight: 600; transition: all 0.3s; display: inline-block;">
+                    01 23 45 67 89
+                </a>
+
+            </div>
+
+            <p style="color: #666; font-size: 0.9rem; margin: 0;">
+                📧 Ou envoyez-nous un email : <a href="mailto:contact@{brand_name_clean}.fr" style="color: var(--primary); font-weight: 600; text-decoration: none;">contact@{brand_name_clean}.fr</a>
+            </p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Search functionality
+    const searchInput = document.getElementById('faqSearch');
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+            const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+
+            if (question.includes(searchTerm) || answer.includes(searchTerm) || searchTerm === '') {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+
+    // Category filtering
+    const categoryBtns = document.querySelectorAll('.category-btn');
+
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const category = this.getAttribute('data-category');
+
+            // Update active button
+            categoryBtns.forEach(b => {
+                b.classList.remove('active');
+                b.style.background = '#f8f9fa';
+                b.style.color = '#666';
+            });
+
+            this.classList.add('active');
+            this.style.background = 'var(--primary)';
+            this.style.color = 'white';
+
+            // Filter FAQ items
+            faqItems.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+
+                if (category === 'all' || itemCategory === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Clear search when changing category
+            searchInput.value = '';
+        });
+    });
+
+    // Search input focus styling
+    searchInput.addEventListener('focus', function() {
+        this.style.borderColor = 'var(--primary)';
+        this.style.boxShadow = '0 0 0 3px rgba(var(--primary-rgb, 0, 123, 255), 0.1)';
+    });
+
+    searchInput.addEventListener('blur', function() {
+        this.style.borderColor = '#e9ecef';
+        this.style.boxShadow = 'none';
+    });
+});
+
+// FAQ Toggle function
+function toggleFaq(element) {
+    const answer = element.nextElementSibling;
+    const icon = element.querySelector('.faq-icon');
+
+    if (answer.style.display === 'none' || answer.style.display === '') {
+        answer.style.display = 'block';
+        icon.textContent = '−';
+        icon.style.transform = 'rotate(180deg)';
+        element.style.borderBottom = '1px solid #f0f0f0';
+    } else {
+        answer.style.display = 'none';
+        icon.textContent = '+';
+        icon.style.transform = 'rotate(0deg)';
+        element.style.borderBottom = 'none';
+    }
+}
+</script>
+
+<style>
+.category-btn:hover {
+    background: var(--primary) !important;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+.category-btn.active {
+    background: var(--primary) !important;
+    color: white !important;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+}
+
+.faq-question:hover {
+    background: rgba(var(--primary-rgb, 0, 123, 255), 0.05);
+}
+
+@media (max-width: 768px) {
+    .faq-page .hero-section h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .faq-page .category-btn {
+        font-size: 0.9rem;
+        padding: 12px 20px !important;
+    }
+
+    .faq-page .faq-question {
+        padding: 20px !important;
+        font-size: 0.95rem;
+    }
+
+    .faq-page .faq-answer {
+        padding: 0 20px 20px !important;
+        font-size: 0.9rem;
+    }
+}
+</style>

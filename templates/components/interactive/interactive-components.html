@@ -1,0 +1,1038 @@
+<!-- Collection de Composants Interactifs Premium -->
+
+<!-- 1. Accordion FAQ Animé -->
+<section class="accordion-section">
+    <style>
+        .accordion-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .accordion-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .accordion-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem;
+            cursor: pointer;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 0%);
+            transition: background 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .accordion-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .accordion-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .accordion-toggle {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-toggle {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            background: #f8f9fa;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+
+        .accordion-text {
+            padding: 1.5rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+    </style>
+
+    <div class="accordion-container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Questions Fréquentes</h2>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="accordion-title">
+                    <span class="accordion-icon">💡</span>
+                    <span>Comment fonctionne notre service ?</span>
+                </div>
+                <div class="accordion-toggle">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-text">
+                    Notre service fonctionne en 3 étapes simples : inscription, configuration et activation.
+                    Vous bénéficiez d'un accompagnement personnalisé tout au long du processus.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="accordion-title">
+                    <span class="accordion-icon">🚀</span>
+                    <span>Quels sont les délais de mise en œuvre ?</span>
+                </div>
+                <div class="accordion-toggle">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-text">
+                    La mise en œuvre complète prend généralement entre 24 et 48 heures.
+                    Pour les projets urgents, nous proposons un service express en 12 heures.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="accordion-title">
+                    <span class="accordion-icon">💰</span>
+                    <span>Quelles sont les options de paiement ?</span>
+                </div>
+                <div class="accordion-toggle">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="accordion-content">
+                <div class="accordion-text">
+                    Nous acceptons tous les moyens de paiement : cartes bancaires, virements, PayPal et cryptomonnaies.
+                    Des facilités de paiement sont disponibles pour les projets importants.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            const allItems = document.querySelectorAll('.accordion-item');
+
+            allItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            item.classList.toggle('active');
+        }
+    </script>
+</section>
+
+<!-- 2. Tabs Interactifs -->
+<section class="tabs-section">
+    <style>
+        .tabs-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .tabs-nav {
+            display: flex;
+            gap: 0.5rem;
+            border-bottom: 2px solid #e5e7eb;
+            margin-bottom: 2rem;
+            overflow-x: auto;
+        }
+
+        .tab-button {
+            padding: 1rem 1.5rem;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: #6b7280;
+            position: relative;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .tab-button::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .tab-button:hover {
+            color: #667eea;
+        }
+
+        .tab-button.active {
+            color: #667eea;
+        }
+
+        .tab-button.active::after {
+            transform: scaleX(1);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-panel {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-panel h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .tab-panel p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .feature-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: #1f2937;
+        }
+
+        .feature-content p {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+    </style>
+
+    <div class="tabs-container">
+        <div class="tabs-nav">
+            <button class="tab-button active" onclick="showTab(event, 'services')">Services</button>
+            <button class="tab-button" onclick="showTab(event, 'features')">Fonctionnalités</button>
+            <button class="tab-button" onclick="showTab(event, 'pricing')">Tarifs</button>
+            <button class="tab-button" onclick="showTab(event, 'support')">Support</button>
+        </div>
+
+        <div id="services" class="tab-content active">
+            <div class="tab-panel">
+                <h3>Nos Services Premium</h3>
+                <p>Découvrez notre gamme complète de services professionnels conçus pour votre succès.</p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-content">
+                            <h4>Développement Rapide</h4>
+                            <p>Solutions sur mesure livrées en temps record</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <div class="feature-content">
+                            <h4>Sécurité Maximale</h4>
+                            <p>Protection avancée de vos données</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📈</div>
+                        <div class="feature-content">
+                            <h4>Analytics Avancés</h4>
+                            <p>Tableaux de bord et insights en temps réel</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <div class="feature-content">
+                            <h4>Portée Globale</h4>
+                            <p>Infrastructure mondiale pour vos projets</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="features" class="tab-content">
+            <div class="tab-panel">
+                <h3>Fonctionnalités Avancées</h3>
+                <p>Des outils puissants pour maximiser votre productivité et vos résultats.</p>
+                <!-- Contenu des fonctionnalités -->
+            </div>
+        </div>
+
+        <div id="pricing" class="tab-content">
+            <div class="tab-panel">
+                <h3>Plans Tarifaires Flexibles</h3>
+                <p>Choisissez le plan qui correspond à vos besoins et votre budget.</p>
+                <!-- Contenu des tarifs -->
+            </div>
+        </div>
+
+        <div id="support" class="tab-content">
+            <div class="tab-panel">
+                <h3>Support Premium 24/7</h3>
+                <p>Une équipe d'experts à votre service à tout moment.</p>
+                <!-- Contenu du support -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(event, tabName) {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            event.currentTarget.classList.add('active');
+            document.getElementById(tabName).classList.add('active');
+        }
+    </script>
+</section>
+
+<!-- 3. Carousel de Témoignages -->
+<section class="carousel-section">
+    <style>
+        .carousel-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+            position: relative;
+        }
+
+        .carousel-wrapper {
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            padding: 3rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+        }
+
+        .testimonial-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .testimonial-text {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .author-info {
+            text-align: left;
+        }
+
+        .author-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .author-role {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            pointer-events: none;
+        }
+
+        .carousel-btn {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            pointer-events: all;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .carousel-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .carousel-dots {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            width: 30px;
+            border-radius: 5px;
+            background: #667eea;
+        }
+    </style>
+
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-slide">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "Un service exceptionnel qui a transformé notre façon de travailler.
+                            Les résultats ont dépassé toutes nos attentes."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MD</div>
+                            <div class="author-info">
+                                <div class="author-name">Marie Dupont</div>
+                                <div class="author-role">CEO, TechCorp</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "L'équipe est incroyablement réactive et professionnelle.
+                            Je recommande vivement leurs services."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">PL</div>
+                            <div class="author-info">
+                                <div class="author-name">Pierre Laurent</div>
+                                <div class="author-role">Directeur Marketing, InnovateCo</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-slide">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">
+                            "Une solution complète qui nous a permis de gagner en efficacité
+                            et de réduire nos coûts de 40%."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SB</div>
+                            <div class="author-info">
+                                <div class="author-name">Sophie Bernard</div>
+                                <div class="author-role">CFO, StartupX</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-nav">
+            <button class="carousel-btn" onclick="moveCarousel(-1)">
+                <svg width="24" height="24" fill="#667eea" viewBox="0 0 24 24">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            <button class="carousel-btn" onclick="moveCarousel(1)">
+                <svg width="24" height="24" fill="#667eea" viewBox="0 0 24 24">
+                    <path d="M9 6l6 6-6 6"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="carousel-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const track = document.getElementById('carouselTrack');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = 3;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function moveCarousel(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        // Auto-play
+        setInterval(() => moveCarousel(1), 5000);
+    </script>
+</section>
+
+<!-- 4. Modal Popup -->
+<section class="modal-section">
+    <style>
+        .modal-trigger-btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 2rem auto;
+            display: block;
+        }
+
+        .modal-trigger-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: scaleIn 0.3s ease;
+        }
+
+        .modal-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border-radius: 20px 20px 0 0;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .form-input {
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-submit {
+            padding: 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+    </style>
+
+    <button class="modal-trigger-btn" onclick="openModal()">Ouvrir la démo interactive</button>
+
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>Demande de démonstration</h2>
+                <div class="modal-close" onclick="closeModal()">✕</div>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form">
+                    <div class="form-field">
+                        <label class="form-label">Nom complet</label>
+                        <input type="text" class="form-input" placeholder="Jean Dupont">
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-input" placeholder="jean@example.com">
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Entreprise</label>
+                        <input type="text" class="form-input" placeholder="Nom de votre entreprise">
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-input" rows="4" placeholder="Décrivez vos besoins..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Envoyer la demande</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeModalOutside(event) {
+            if (event.target === event.currentTarget) {
+                closeModal();
+            }
+        }
+
+        // Fermer avec ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</section>
+
+<!-- 5. Progress Steps -->
+<section class="progress-steps-section">
+    <style>
+        .steps-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 2rem;
+        }
+
+        .steps-wrapper {
+            position: relative;
+        }
+
+        .steps-line {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #e5e7eb;
+            z-index: 1;
+        }
+
+        .steps-progress {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            z-index: 2;
+            transition: width 0.5s ease;
+        }
+
+        .steps-list {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 3;
+        }
+
+        .step-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+
+        .step-circle {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border: 3px solid #e5e7eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #9ca3af;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .step-item.active .step-circle {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-color: #667eea;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .step-item.completed .step-circle {
+            background: #10b981;
+            border-color: #10b981;
+            color: white;
+        }
+
+        .step-title {
+            margin-top: 1rem;
+            font-weight: 600;
+            color: #6b7280;
+            text-align: center;
+        }
+
+        .step-item.active .step-title {
+            color: #667eea;
+        }
+
+        .step-content {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .step-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .step-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .step-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .step-btn-prev {
+            background: #f3f4f6;
+            color: #6b7280;
+        }
+
+        .step-btn-next {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .step-btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+
+    <div class="steps-container">
+        <h2 style="text-align: center; margin-bottom: 3rem;">Notre Processus en 4 Étapes</h2>
+
+        <div class="steps-wrapper">
+            <div class="steps-line"></div>
+            <div class="steps-progress" id="stepsProgress" style="width: 0%"></div>
+
+            <div class="steps-list">
+                <div class="step-item active" data-step="1">
+                    <div class="step-circle">1</div>
+                    <div class="step-title">Analyse</div>
+                </div>
+                <div class="step-item" data-step="2">
+                    <div class="step-circle">2</div>
+                    <div class="step-title">Stratégie</div>
+                </div>
+                <div class="step-item" data-step="3">
+                    <div class="step-circle">3</div>
+                    <div class="step-title">Implémentation</div>
+                </div>
+                <div class="step-item" data-step="4">
+                    <div class="step-circle">4</div>
+                    <div class="step-title">Optimisation</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="step-content active" data-content="1">
+            <h3>Étape 1 : Analyse Approfondie</h3>
+            <p>Nous commençons par une analyse complète de votre situation actuelle, vos objectifs et vos défis.</p>
+            <div class="step-actions">
+                <button class="step-btn step-btn-next" onclick="nextStep()">Suivant</button>
+            </div>
+        </div>
+
+        <div class="step-content" data-content="2">
+            <h3>Étape 2 : Élaboration de la Stratégie</h3>
+            <p>Nous développons une stratégie personnalisée basée sur les insights de notre analyse.</p>
+            <div class="step-actions">
+                <button class="step-btn step-btn-prev" onclick="prevStep()">Précédent</button>
+                <button class="step-btn step-btn-next" onclick="nextStep()">Suivant</button>
+            </div>
+        </div>
+
+        <div class="step-content" data-content="3">
+            <h3>Étape 3 : Implémentation</h3>
+            <p>Mise en œuvre de la solution avec notre équipe d'experts dédiés.</p>
+            <div class="step-actions">
+                <button class="step-btn step-btn-prev" onclick="prevStep()">Précédent</button>
+                <button class="step-btn step-btn-next" onclick="nextStep()">Suivant</button>
+            </div>
+        </div>
+
+        <div class="step-content" data-content="4">
+            <h3>Étape 4 : Optimisation Continue</h3>
+            <p>Suivi des performances et optimisation continue pour garantir les meilleurs résultats.</p>
+            <div class="step-actions">
+                <button class="step-btn step-btn-prev" onclick="prevStep()">Précédent</button>
+                <button class="step-btn step-btn-next" style="background: #10b981;">Terminé ✓</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+        const totalSteps = 4;
+
+        function updateSteps() {
+            const steps = document.querySelectorAll('.step-item');
+            const contents = document.querySelectorAll('.step-content');
+            const progress = document.getElementById('stepsProgress');
+
+            steps.forEach((step, index) => {
+                const stepNum = index + 1;
+                step.classList.remove('active', 'completed');
+
+                if (stepNum < currentStep) {
+                    step.classList.add('completed');
+                    step.querySelector('.step-circle').innerHTML = '✓';
+                } else if (stepNum === currentStep) {
+                    step.classList.add('active');
+                } else {
+                    step.querySelector('.step-circle').innerHTML = stepNum;
+                }
+            });
+
+            contents.forEach(content => {
+                content.classList.remove('active');
+                if (content.dataset.content == currentStep) {
+                    content.classList.add('active');
+                }
+            });
+
+            const progressWidth = ((currentStep - 1) / (totalSteps - 1)) * 100;
+            progress.style.width = progressWidth + '%';
+        }
+
+        function nextStep() {
+            if (currentStep < totalSteps) {
+                currentStep++;
+                updateSteps();
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                updateSteps();
+            }
+        }
+
+        // Clic sur les cercles
+        document.querySelectorAll('.step-item').forEach(item => {
+            item.addEventListener('click', () => {
+                currentStep = parseInt(item.dataset.step);
+                updateSteps();
+            });
+        });
+    </script>
+</section>

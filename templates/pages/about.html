@@ -1,0 +1,245 @@
+<div class="about-page">
+    <!-- Hero Section -->
+    <div class="hero-section" style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 100px 0; text-align: center; margin-bottom: 80px; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 50px 50px; opacity: 0.3;"></div>
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 25px; font-weight: 700;">À propos de {brand_name}</h1>
+            <p style="font-size: 1.3rem; opacity: 0.95; max-width: 600px; margin: 0 auto; line-height: 1.6;">{about_intro}</p>
+        </div>
+    </div>
+
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+
+        <!-- Story Section -->
+        <div class="story-section" style="margin-bottom: 80px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 25px; color: var(--primary);">Notre Histoire</h2>
+                    <p style="font-size: 1.1rem; color: #666; line-height: 1.7; margin-bottom: 25px;">{company_story_p1}</p>
+                    <p style="font-size: 1.1rem; color: #666; line-height: 1.7; margin-bottom: 25px;">{company_story_p2}</p>
+                    <p style="font-size: 1.1rem; color: #666; line-height: 1.7;">{company_story_p3}</p>
+                </div>
+                <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 20px; height: 400px; position: relative; overflow: hidden;">
+                    <div style="position: absolute; inset: 20px; background: rgba(255,255,255,0.1); border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📈</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission & Vision -->
+        <div class="mission-vision" style="margin-bottom: 80px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+
+                <div style="background: white; border-radius: 20px; padding: 50px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -20px; right: -20px; width: 120px; height: 120px; background: linear-gradient(45deg, var(--primary), transparent); opacity: 0.1; border-radius: 50%;"></div>
+                    <div style="position: relative; z-index: 2;">
+                        <div style="background: var(--primary); color: white; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 30px;">🎯</div>
+                        <h3 style="font-size: 2rem; margin-bottom: 20px; color: var(--primary);">Notre Mission</h3>
+                        <p style="font-size: 1.1rem; color: #666; line-height: 1.7;">{company_mission}</p>
+                    </div>
+                </div>
+
+                <div style="background: white; border-radius: 20px; padding: 50px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -20px; right: -20px; width: 120px; height: 120px; background: linear-gradient(45deg, var(--primary), transparent); opacity: 0.1; border-radius: 50%;"></div>
+                    <div style="position: relative; z-index: 2;">
+                        <div style="background: var(--primary); color: white; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin-bottom: 30px;">🚀</div>
+                        <h3 style="font-size: 2rem; margin-bottom: 20px; color: var(--primary);">Notre Vision</h3>
+                        <p style="font-size: 1.1rem; color: #666; line-height: 1.7;">{company_vision}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Values Section -->
+        <div class="values-section" style="background: #f8f9fa; padding: 80px 40px; border-radius: 20px; margin-bottom: 80px;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--primary);">Nos Valeurs</h2>
+                <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">Les principes qui guident chacune de nos actions et décisions</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+
+                <div style="text-align: center;">
+                    <div style="background: var(--primary); color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 25px;">🤝</div>
+                    <h4 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--primary);">{value_1_title}</h4>
+                    <p style="color: #666; line-height: 1.6;">{value_1_description}</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="background: var(--primary); color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 25px;">💡</div>
+                    <h4 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--primary);">{value_2_title}</h4>
+                    <p style="color: #666; line-height: 1.6;">{value_2_description}</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="background: var(--primary); color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 25px;">🏆</div>
+                    <h4 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--primary);">{value_3_title}</h4>
+                    <p style="color: #666; line-height: 1.6;">{value_3_description}</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <div style="background: var(--primary); color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 25px;">🌱</div>
+                    <h4 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--primary);">{value_4_title}</h4>
+                    <p style="color: #666; line-height: 1.6;">{value_4_description}</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="team-section" style="margin-bottom: 80px;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--primary);">Notre Équipe</h2>
+                <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">Des experts passionnés au service de votre réussite</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+
+                <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s;">
+                    <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: 700;">
+                        {team_member_1_initials}
+                    </div>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 10px; color: var(--primary);">{team_member_1_name}</h4>
+                    <p style="color: #666; margin-bottom: 15px; font-weight: 600;">{team_member_1_role}</p>
+                    <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">{team_member_1_bio}</p>
+                </div>
+
+                <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s;">
+                    <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: 700;">
+                        {team_member_2_initials}
+                    </div>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 10px; color: var(--primary);">{team_member_2_name}</h4>
+                    <p style="color: #666; margin-bottom: 15px; font-weight: 600;">{team_member_2_role}</p>
+                    <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">{team_member_2_bio}</p>
+                </div>
+
+                <div style="background: white; border-radius: 20px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s;">
+                    <div style="background: linear-gradient(135deg, var(--primary), var(--secondary)); width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 25px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; font-weight: 700;">
+                        {team_member_3_initials}
+                    </div>
+                    <h4 style="font-size: 1.4rem; margin-bottom: 10px; color: var(--primary);">{team_member_3_name}</h4>
+                    <p style="color: #666; margin-bottom: 15px; font-weight: 600;">{team_member_3_role}</p>
+                    <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">{team_member_3_bio}</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 80px 40px; border-radius: 20px; margin-bottom: 80px; text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Nos Résultats en Chiffres</h2>
+            <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 50px; max-width: 600px; margin-left: auto; margin-right: auto;">La preuve de notre expertise et de la satisfaction de nos clients</p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
+
+                <div>
+                    <div style="font-size: 3.5rem; font-weight: 700; margin-bottom: 10px;">{stat_1_number}</div>
+                    <div style="font-size: 1.1rem; opacity: 0.9;">{stat_1_label}</div>
+                </div>
+
+                <div>
+                    <div style="font-size: 3.5rem; font-weight: 700; margin-bottom: 10px;">{stat_2_number}</div>
+                    <div style="font-size: 1.1rem; opacity: 0.9;">{stat_2_label}</div>
+                </div>
+
+                <div>
+                    <div style="font-size: 3.5rem; font-weight: 700; margin-bottom: 10px;">{stat_3_number}</div>
+                    <div style="font-size: 1.1rem; opacity: 0.9;">{stat_3_label}</div>
+                </div>
+
+                <div>
+                    <div style="font-size: 3.5rem; font-weight: 700; margin-bottom: 10px;">{stat_4_number}</div>
+                    <div style="font-size: 1.1rem; opacity: 0.9;">{stat_4_label}</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="timeline-section" style="margin-bottom: 80px;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--primary);">Notre Parcours</h2>
+                <p style="font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto;">Les étapes clés de notre développement</p>
+            </div>
+
+            <div style="position: relative; max-width: 800px; margin: 0 auto;">
+                <!-- Timeline line -->
+                <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: var(--primary); transform: translateX(-50%);"></div>
+
+                <!-- Timeline items -->
+                <div style="position: relative; margin-bottom: 60px;">
+                    <div style="display: flex; align-items: center;">
+                        <div style="flex: 1; text-align: right; padding-right: 40px;">
+                            <h4 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--primary);">{timeline_1_year}</h4>
+                            <h5 style="font-size: 1.1rem; margin-bottom: 10px; font-weight: 600;">{timeline_1_title}</h5>
+                            <p style="color: #666; line-height: 1.6;">{timeline_1_description}</p>
+                        </div>
+                        <div style="background: var(--primary); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; z-index: 2; position: relative;">1</div>
+                        <div style="flex: 1; padding-left: 40px;"></div>
+                    </div>
+                </div>
+
+                <div style="position: relative; margin-bottom: 60px;">
+                    <div style="display: flex; align-items: center;">
+                        <div style="flex: 1; padding-right: 40px;"></div>
+                        <div style="background: var(--primary); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; z-index: 2; position: relative;">2</div>
+                        <div style="flex: 1; text-align: left; padding-left: 40px;">
+                            <h4 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--primary);">{timeline_2_year}</h4>
+                            <h5 style="font-size: 1.1rem; margin-bottom: 10px; font-weight: 600;">{timeline_2_title}</h5>
+                            <p style="color: #666; line-height: 1.6;">{timeline_2_description}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="position: relative; margin-bottom: 60px;">
+                    <div style="display: flex; align-items: center;">
+                        <div style="flex: 1; text-align: right; padding-right: 40px;">
+                            <h4 style="font-size: 1.3rem; margin-bottom: 10px; color: var(--primary);">{timeline_3_year}</h4>
+                            <h5 style="font-size: 1.1rem; margin-bottom: 10px; font-weight: 600;">{timeline_3_title}</h5>
+                            <p style="color: #666; line-height: 1.6;">{timeline_3_description}</p>
+                        </div>
+                        <div style="background: var(--primary); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; z-index: 2; position: relative;">3</div>
+                        <div style="flex: 1; padding-left: 40px;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        {cta_component}
+
+    </div>
+</div>
+
+<style>
+.team-section > div:last-child > div:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .story-section > div,
+    .mission-vision > div {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    .timeline-section .timeline-line {
+        left: 30px !important;
+    }
+
+    .timeline-section .timeline-item {
+        padding-left: 60px !important;
+        text-align: left !important;
+    }
+
+    .timeline-section .timeline-number {
+        left: 5px !important;
+        transform: none !important;
+    }
+}
+</style>

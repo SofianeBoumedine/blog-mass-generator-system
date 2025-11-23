@@ -1,0 +1,9 @@
+# Exemple de fichier de mots-clés
+# Un mot-clé par ligne
+# Les lignes commençant par # sont ignorées
+
+marketing digital
+seo local
+référencement naturel
+backlinks de qualité
+netlinking efficace

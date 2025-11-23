@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sections Modulaires</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #f8fafc;
+            --accent-color: #059669;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        /* === HERO SECTIONS === */
+        .hero-minimal {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 8rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-minimal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,0 1000,300 1000,1000 0,700"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-minimal .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-minimal h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.2s forwards;
+        }
+
+        .hero-minimal p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.4s forwards;
+        }
+
+        .hero-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 80vh;
+            align-items: center;
+        }
+
+        .hero-split-content {
+            padding: 2rem;
+        }
+
+        .hero-split-image {
+            background: var(--gradient-1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-split-image::after {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            width: 60%;
+            height: 60%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-video {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            opacity: 0.8;
+        }
+
+        .hero-video-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+        }
+
+        /* === FEATURE SECTIONS === */
+        .features-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--secondary-color);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateX(8px);
+        }
+
+        .feature-item-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .comparison-table {
+            overflow-x: auto;
+            margin-top: 2rem;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table td:first-child {
+            font-weight: 600;
+            background: var(--secondary-color);
+        }
+
+        /* === TESTIMONIAL SECTIONS === */
+        .testimonials-slider {
+            position: relative;
+            margin-top: 3rem;
+        }
+
+        .testimonial-slide {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--gradient-2);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .testimonial-quote {
+            font-size: 1.25rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-role {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--primary-color);
+            font-family: serif;
+        }
+
+        /* === PRICING SECTIONS === */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.05);
+            border: 2px solid var(--primary-color);
+        }
+
+        .pricing-card.featured::before {
+            content: 'Populaire';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-8px);
+        }
+
+        .pricing-plan {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-period {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        /* === CONTACT SECTIONS === */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .contact-multistep {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .step-indicator {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .step {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--border-color);
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin: 0 1rem;
+            position: relative;
+        }
+
+        .step.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .step.completed {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .step::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 2rem;
+            height: 2px;
+            background: var(--border-color);
+            transform: translateY(-50%);
+        }
+
+        .step:last-child::after {
+            display: none;
+        }
+
+        .step.completed::after {
+            background: var(--success-color);
+        }
+
+        .contact-map {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-map-placeholder {
+            background: var(--secondary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 1.25rem;
+            min-height: 300px;
+        }
+
+        /* === BUTTONS === */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: var(--secondary-color);
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-gradient {
+            background: var(--gradient-1);
+            color: white;
+        }
+
+        .btn-gradient:hover {
+            background: var(--gradient-2);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* === ANIMATIONS === */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .animate-slide-left {
+            opacity: 0;
+            animation: slideInLeft 0.8s ease forwards;
+        }
+
+        .animate-slide-right {
+            opacity: 0;
+            animation: slideInRight 0.8s ease forwards;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .hero-split {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-map {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .pricing-card.featured:hover {
+                transform: translateY(-8px);
+            }
+
+            .step-indicator {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .step::after {
+                top: 100%;
+                left: 50%;
+                width: 2px;
+                height: 2rem;
+                transform: translateX(-50%);
+            }
+        }
+
+        /* === UTILITY CLASSES === */
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        .mb-1 { margin-bottom: 0.25rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 1rem; }
+        .mb-4 { margin-bottom: 1.5rem; }
+        .mt-1 { margin-top: 0.25rem; }
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-3 { margin-top: 1rem; }
+        .mt-4 { margin-top: 1.5rem; }
+        .p-1 { padding: 0.25rem; }
+        .p-2 { padding: 0.5rem; }
+        .p-3 { padding: 1rem; }
+        .p-4 { padding: 1.5rem; }
+    </style>
+</head>
+<body>
+    <!-- Hero Section - Minimal -->
+    <section class="hero-minimal" id="hero-minimal">
+        <div class="container">
+            <h1>{{TITLE}}</h1>
+            <p>{{DESCRIPTION}}</p>
+            <a href="#" class="btn btn-primary">{{CTA_TEXT}}</a>
+        </div>
+    </section>
+
+    <!-- Hero Section - Split -->
+    <section class="hero-split" id="hero-split">
+        <div class="hero-split-content">
+            <h1 class="animate-slide-left">{{TITLE}}</h1>
+            <p class="animate-slide-left">{{DESCRIPTION}}</p>
+            <a href="#" class="btn btn-gradient animate-slide-left">{{CTA_TEXT}}</a>
+        </div>
+        <div class="hero-split-image"></div>
+    </section>
+
+    <!-- Hero Section - Video Background -->
+    <section class="hero-video" id="hero-video">
+        <div class="hero-video-bg"></div>
+        <div class="hero-video-content">
+            <h1 class="animate-fade-in">{{TITLE}}</h1>
+            <p class="animate-fade-in">{{DESCRIPTION}}</p>
+            <a href="#" class="btn btn-primary animate-fade-in">{{CTA_TEXT}}</a>
+        </div>
+    </section>
+
+    <!-- Features Section - Cards -->
+    <section class="section" id="features-cards">
+        <div class="container">
+            <h2 class="text-center mb-4">{{FEATURES_TITLE}}</h2>
+            <div class="features-cards">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>{{FEATURE_1_TITLE}}</h3>
+                    <p>{{FEATURE_1_DESCRIPTION}}</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>{{FEATURE_2_TITLE}}</h3>
+                    <p>{{FEATURE_2_DESCRIPTION}}</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>{{FEATURE_3_TITLE}}</h3>
+                    <p>{{FEATURE_3_DESCRIPTION}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section - List -->
+    <section class="section" id="features-list">
+        <div class="container">
+            <h2 class="text-center mb-4">{{FEATURES_TITLE}}</h2>
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-item-icon">✓</div>
+                    <div>
+                        <h4>{{FEATURE_1_TITLE}}</h4>
+                        <p>{{FEATURE_1_DESCRIPTION}}</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-item-icon">✓</div>
+                    <div>
+                        <h4>{{FEATURE_2_TITLE}}</h4>
+                        <p>{{FEATURE_2_DESCRIPTION}}</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-item-icon">✓</div>
+                    <div>
+                        <h4>{{FEATURE_3_TITLE}}</h4>
+                        <p>{{FEATURE_3_DESCRIPTION}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section - Comparison Table -->
+    <section class="section" id="features-comparison">
+        <div class="container">
+            <h2 class="text-center mb-4">{{COMPARISON_TITLE}}</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fonctionnalité</th>
+                            <th>Basique</th>
+                            <th>Pro</th>
+                            <th>Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{FEATURE_1}}</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>{{FEATURE_2}}</td>
+                            <td>✗</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>{{FEATURE_3}}</td>
+                            <td>✗</td>
+                            <td>✗</td>
+                            <td>✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section - Slider -->
+    <section class="section" id="testimonials-slider">
+        <div class="container">
+            <h2 class="text-center mb-4">{{TESTIMONIALS_TITLE}}</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-slide">
+                    <div class="testimonial-avatar">{{TESTIMONIAL_1_INITIAL}}</div>
+                    <div class="testimonial-quote">"{{TESTIMONIAL_1_QUOTE}}"</div>
+                    <div class="testimonial-author">{{TESTIMONIAL_1_NAME}}</div>
+                    <div class="testimonial-role">{{TESTIMONIAL_1_ROLE}}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section - Grid -->
+    <section class="section" id="testimonials-grid">
+        <div class="container">
+            <h2 class="text-center mb-4">{{TESTIMONIALS_TITLE}}</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"{{TESTIMONIAL_1_QUOTE}}"</p>
+                    <div class="testimonial-author">{{TESTIMONIAL_1_NAME}}</div>
+                    <div class="testimonial-role">{{TESTIMONIAL_1_ROLE}}</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"{{TESTIMONIAL_2_QUOTE}}"</p>
+                    <div class="testimonial-author">{{TESTIMONIAL_2_NAME}}</div>
+                    <div class="testimonial-role">{{TESTIMONIAL_2_ROLE}}</div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"{{TESTIMONIAL_3_QUOTE}}"</p>
+                    <div class="testimonial-author">{{TESTIMONIAL_3_NAME}}</div>
+                    <div class="testimonial-role">{{TESTIMONIAL_3_ROLE}}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing-section">
+        <div class="container">
+            <h2 class="text-center mb-4">{{PRICING_TITLE}}</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-plan">{{PLAN_1_NAME}}</div>
+                    <div class="pricing-price">{{PLAN_1_PRICE}}</div>
+                    <div class="pricing-period">{{PLAN_1_PERIOD}}</div>
+                    <ul class="pricing-features">
+                        <li>{{PLAN_1_FEATURE_1}}</li>
+                        <li>{{PLAN_1_FEATURE_2}}</li>
+                        <li>{{PLAN_1_FEATURE_3}}</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">{{PLAN_1_CTA}}</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-plan">{{PLAN_2_NAME}}</div>
+                    <div class="pricing-price">{{PLAN_2_PRICE}}</div>
+                    <div class="pricing-period">{{PLAN_2_PERIOD}}</div>
+                    <ul class="pricing-features">
+                        <li>{{PLAN_2_FEATURE_1}}</li>
+                        <li>{{PLAN_2_FEATURE_2}}</li>
+                        <li>{{PLAN_2_FEATURE_3}}</li>
+                        <li>{{PLAN_2_FEATURE_4}}</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">{{PLAN_2_CTA}}</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-plan">{{PLAN_3_NAME}}</div>
+                    <div class="pricing-price">{{PLAN_3_PRICE}}</div>
+                    <div class="pricing-period">{{PLAN_3_PERIOD}}</div>
+                    <ul class="pricing-features">
+                        <li>{{PLAN_3_FEATURE_1}}</li>
+                        <li>{{PLAN_3_FEATURE_2}}</li>
+                        <li>{{PLAN_3_FEATURE_3}}</li>
+                        <li>{{PLAN_3_FEATURE_4}}</li>
+                        <li>{{PLAN_3_FEATURE_5}}</li>
+                    </ul>
+                    <a href="#" class="btn btn-gradient">{{PLAN_3_CTA}}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - Simple -->
+    <section class="section" id="contact-simple">
+        <div class="container">
+            <h2 class="text-center mb-4">{{CONTACT_TITLE}}</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">{{CONTACT_CTA}}</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section - Multi-step -->
+    <section class="section" id="contact-multistep">
+        <div class="container">
+            <h2 class="text-center mb-4">{{CONTACT_TITLE}}</h2>
+            <div class="contact-multistep">
+                <div class="step-indicator">
+                    <div class="step active">1</div>
+                    <div class="step">2</div>
+                    <div class="step">3</div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="service">Type de service</label>
+                        <select id="service" name="service" required>
+                            <option value="">Sélectionnez un service</option>
+                            <option value="consultation">Consultation</option>
+                            <option value="development">Développement</option>
+                            <option value="support">Support</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget estimé</label>
+                        <select id="budget" name="budget" required>
+                            <option value="">Sélectionnez un budget</option>
+                            <option value="1k-5k">1K - 5K €</option>
+                            <option value="5k-10k">5K - 10K €</option>
+                            <option value="10k+">10K+ €</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary">Suivant</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - With Map -->
+    <section class="section" id="contact-map">
+        <div class="container">
+            <h2 class="text-center mb-4">{{CONTACT_TITLE}}</h2>
+            <div class="contact-map">
+                <div class="contact-info">
+                    <h3>Nos coordonnées</h3>
+                    <p><strong>Adresse:</strong> {{COMPANY_ADDRESS}}</p>
+                    <p><strong>Téléphone:</strong> {{COMPANY_PHONE}}</p>
+                    <p><strong>Email:</strong> {{COMPANY_EMAIL}}</p>
+                    <p><strong>Horaires:</strong> {{COMPANY_HOURS}}</p>
+                </div>
+                <div class="contact-map-placeholder">
+                    🗺️ Carte interactive
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Animation sur scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observer tous les éléments animés
+        document.querySelectorAll('.animate-fade-in, .animate-slide-left, .animate-slide-right, .feature-card, .testimonial-card, .pricing-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Gestion du formulaire multi-étapes
+        const steps = document.querySelectorAll('.step');
+        const nextButtons = document.querySelectorAll('.btn[type="button"]');
+
+        nextButtons.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                if (index < steps.length - 1) {
+                    steps[index].classList.add('completed');
+                    steps[index].classList.remove('active');
+                    steps[index + 1].classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll pour les liens d'ancrage
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

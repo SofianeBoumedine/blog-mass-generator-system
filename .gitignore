@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+
+# Generated content
+blog/*.html
+output/
+
+# Backup directories
+.layouts-backup*/
+*.backup
+*.bak
+
+# Data files
+data/api-usage.json
+data/alerts.json
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# API Keys
+config.local.json

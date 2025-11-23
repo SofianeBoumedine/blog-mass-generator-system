@@ -1,0 +1,41 @@
+{
+  "global": {
+    "keywordsFile": "examples/keywords-test.txt",
+    "apiKey": "${PERPLEXITY_API_KEY}",
+    "maxArticles": 15,
+    "delayBetweenRequests": 3000,
+    "verbose": true
+  },
+  "sites": [
+    {
+      "domain": "marketing-digital-pro.com",
+      "keywordsFile": "examples/keywords-test.txt",
+      "maxArticles": 20,
+      "outputDir": "generated-sites/marketing-digital-pro"
+    },
+    {
+      "domain": "agence-web-innovante.fr",
+      "keywordsFile": "examples/keywords-test.txt",
+      "maxArticles": 15,
+      "outputDir": "generated-sites/agence-web-innovante"
+    },
+    {
+      "domain": "consultant-seo-expert.com",
+      "keywordsFile": "examples/keywords-test.txt",
+      "maxArticles": 25,
+      "outputDir": "generated-sites/consultant-seo-expert"
+    },
+    {
+      "domain": "formation-marketing-online.fr",
+      "keywordsFile": "examples/keywords-test.txt",
+      "maxArticles": 30,
+      "outputDir": "generated-sites/formation-marketing-online"
+    },
+    {
+      "domain": "outils-marketing-gratuits.com",
+      "keywordsFile": "examples/keywords-test.txt",
+      "maxArticles": 10,
+      "outputDir": "generated-sites/outils-marketing-gratuits"
+    }
+  ]
+}
