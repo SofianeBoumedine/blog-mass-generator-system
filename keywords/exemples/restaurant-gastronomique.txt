@@ -1,0 +1,23 @@
+# Keywords pour restaurant gastronomique
+# Un keyword par ligne
+
+restaurant gastronomique
+chef étoilé
+menu dégustation
+cuisine française
+produits locaux
+réservation restaurant
+carte des vins
+accord mets vins
+cuisine de saison
+privatisation restaurant
+traiteur événement
+brunch
+terrasse
+bistrot
+gastronomie
+fine dining
+expérience culinaire
+plat du jour
+menu végétarien
+soirée privée

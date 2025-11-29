@@ -1,0 +1,23 @@
+# Keywords pour salle de sport / coaching
+# Un keyword par ligne
+
+coach sportif
+musculation
+fitness
+perte de poids
+programme entraînement
+nutrition sportive
+cardio training
+HIIT
+crossfit
+remise en forme
+personal trainer
+salle de sport
+cours collectifs
+transformation physique
+prise de masse
+stretching
+yoga
+préparation physique
+objectif fitness
+bien-être

@@ -1,0 +1,23 @@
+# Keywords pour site SaaS/Tech
+# Un keyword par ligne
+
+logiciel saas
+automatisation
+productivité
+gestion de projet
+collaboration équipe
+cloud computing
+API REST
+intégration
+analytics
+tableau de bord
+CRM
+workflow
+automatiser tâches
+transformation digitale
+outil entreprise
+scalabilité
+sécurité données
+RGPD conformité
+support technique
+déploiement cloud

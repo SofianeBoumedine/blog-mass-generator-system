@@ -1,0 +1,23 @@
+# Keywords pour agence immobilière
+# Un keyword par ligne
+
+immobilier paris
+appartement paris
+achat appartement
+vente immobilière
+estimation gratuite
+investissement locatif
+agent immobilier
+mandat exclusif
+visite virtuelle
+bien immobilier
+prix au mètre carré
+quartier paris
+location appartement
+gestion locative
+défiscalisation
+loi pinel
+crédit immobilier
+notaire
+compromis vente
+acte authentique

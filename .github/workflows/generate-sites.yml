@@ -1,0 +1,227 @@
+# ════════════════════════════════════════════════════════════════════════════
+# BLOG MASS GENERATOR - CI/CD PIPELINE
+# ════════════════════════════════════════════════════════════════════════════
+#
+# Ce workflow:
+# 1. Détecte les fichiers .txt pushés dans le dossier /keywords/
+# 2. Génère automatiquement les sites correspondants
+# 3. Déploie sur FTP
+#
+# Configuration requise (GitHub Secrets):
+# - FTP_HOST: Adresse du serveur FTP
+# - FTP_USER: Nom d'utilisateur FTP
+# - FTP_PASSWORD: Mot de passe FTP
+# - PERPLEXITY_API_KEY: Clé API Perplexity (optionnel, pour articles)
+#
+# ════════════════════════════════════════════════════════════════════════════
+
+name: Generate & Deploy Sites
+
+on:
+  push:
+    paths:
+      - 'keywords/*.txt'
+      - 'keywords/**/*.txt'
+    branches:
+      - main
+      - master
+
+  # Permet de lancer manuellement
+  workflow_dispatch:
+    inputs:
+      keywords_file:
+        description: 'Fichier keywords spécifique (ex: keywords/site1.txt)'
+        required: false
+        type: string
+      deploy_only:
+        description: 'Déployer uniquement (sans régénérer)'
+        required: false
+        type: boolean
+        default: false
+
+env:
+  NODE_VERSION: '18'
+
+jobs:
+  # ════════════════════════════════════════════════════════════════════════
+  # JOB 1: Détection des fichiers modifiés
+  # ════════════════════════════════════════════════════════════════════════
+  detect-changes:
+    name: Detect Changed Files
+    runs-on: ubuntu-latest
+    outputs:
+      txt_files: ${{ steps.detect.outputs.txt_files }}
+      has_changes: ${{ steps.detect.outputs.has_changes }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect changed .txt files
+        id: detect
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ] && [ -n "${{ github.event.inputs.keywords_file }}" ]; then
+            # Mode manuel avec fichier spécifique
+            echo "txt_files=[\"${{ github.event.inputs.keywords_file }}\"]" >> $GITHUB_OUTPUT
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Mode manuel: ${{ github.event.inputs.keywords_file }}"
+          else
+            # Détection automatique des fichiers modifiés
+            CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD -- 'keywords/*.txt' 'keywords/**/*.txt' 2>/dev/null || echo "")
+
+            if [ -z "$CHANGED_FILES" ]; then
+              # Fallback: tous les fichiers txt
+              CHANGED_FILES=$(find keywords -name "*.txt" -type f 2>/dev/null || echo "")
+            fi
+
+            if [ -z "$CHANGED_FILES" ]; then
+              echo "has_changes=false" >> $GITHUB_OUTPUT
+              echo "Aucun fichier .txt détecté"
+            else
+              # Convertir en JSON array
+              JSON_ARRAY=$(echo "$CHANGED_FILES" | jq -R -s -c 'split("\n") | map(select(length > 0))')
+              echo "txt_files=$JSON_ARRAY" >> $GITHUB_OUTPUT
+              echo "has_changes=true" >> $GITHUB_OUTPUT
+              echo "Fichiers détectés: $CHANGED_FILES"
+            fi
+          fi
+
+  # ════════════════════════════════════════════════════════════════════════
+  # JOB 2: Génération des sites
+  # ════════════════════════════════════════════════════════════════════════
+  generate:
+    name: Generate Sites
+    needs: detect-changes
+    if: needs.detect-changes.outputs.has_changes == 'true' && github.event.inputs.deploy_only != 'true'
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        txt_file: ${{ fromJson(needs.detect-changes.outputs.txt_files) }}
+      max-parallel: 5  # Générer 5 sites en parallèle max
+      fail-fast: false  # Continuer même si un site échoue
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Extract site name from filename
+        id: site-info
+        run: |
+          FILENAME="${{ matrix.txt_file }}"
+          SITE_NAME=$(basename "$FILENAME" .txt)
+          echo "site_name=$SITE_NAME" >> $GITHUB_OUTPUT
+          echo "Generating site: $SITE_NAME"
+
+      - name: Generate site
+        id: generate
+        env:
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+        run: |
+          node scripts/generate-from-txt.js "${{ matrix.txt_file }}" "./output/${{ steps.site-info.outputs.site_name }}"
+
+          # Vérifier que le site a été généré
+          if [ -f "./output/${{ steps.site-info.outputs.site_name }}/index.html" ]; then
+            echo "success=true" >> $GITHUB_OUTPUT
+            echo "Site généré avec succès"
+          else
+            echo "success=false" >> $GITHUB_OUTPUT
+            echo "::error::Échec de la génération du site"
+            exit 1
+          fi
+
+      - name: Upload site artifact
+        if: steps.generate.outputs.success == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-${{ steps.site-info.outputs.site_name }}
+          path: ./output/${{ steps.site-info.outputs.site_name }}
+          retention-days: 7
+
+  # ════════════════════════════════════════════════════════════════════════
+  # JOB 3: Déploiement FTP
+  # ════════════════════════════════════════════════════════════════════════
+  deploy:
+    name: Deploy to FTP
+    needs: [detect-changes, generate]
+    if: always() && needs.detect-changes.outputs.has_changes == 'true'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: ./sites
+
+      - name: List generated sites
+        run: |
+          echo "Sites à déployer:"
+          ls -la ./sites/ || echo "Aucun site"
+
+      - name: Deploy to FTP
+        if: ${{ secrets.FTP_HOST != '' }}
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./sites/
+          server-dir: ${{ secrets.FTP_REMOTE_DIR || '/public_html/' }}
+          protocol: ftp
+          port: ${{ secrets.FTP_PORT || 21 }}
+          dangerous-clean-slate: false  # Ne pas supprimer les fichiers existants
+
+      - name: Deploy summary
+        run: |
+          echo "## Déploiement terminé" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Sites déployés:" >> $GITHUB_STEP_SUMMARY
+          for site in ./sites/site-*; do
+            if [ -d "$site" ]; then
+              SITE_NAME=$(basename "$site" | sed 's/site-//')
+              echo "- $SITE_NAME" >> $GITHUB_STEP_SUMMARY
+            fi
+          done
+
+  # ════════════════════════════════════════════════════════════════════════
+  # JOB 4: Notification (optionnel)
+  # ════════════════════════════════════════════════════════════════════════
+  notify:
+    name: Send Notification
+    needs: [generate, deploy]
+    if: always()
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Prepare notification
+        id: notification
+        run: |
+          if [ "${{ needs.deploy.result }}" == "success" ]; then
+            echo "status=success" >> $GITHUB_OUTPUT
+            echo "message=Sites générés et déployés avec succès" >> $GITHUB_OUTPUT
+          else
+            echo "status=failure" >> $GITHUB_OUTPUT
+            echo "message=Erreur lors de la génération/déploiement" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create summary
+        run: |
+          echo "# Résumé du Pipeline" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Statut**: ${{ steps.notification.outputs.status }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Message**: ${{ steps.notification.outputs.message }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Déclencheur**: ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
