@@ -1,0 +1,382 @@
+{
+  "_description": "Fallbacks thématiques pour contenus adaptés par industrie",
+  "_version": "1.0.0",
+
+  "restaurant": {
+    "features": [
+      { "title": "Cuisine maison", "description": "Des plats préparés chaque jour avec des produits frais sélectionnés" },
+      { "title": "Produits locaux", "description": "Nous travaillons avec les producteurs de notre région" },
+      { "title": "Chef passionné", "description": "Notre chef met son savoir-faire au service de votre plaisir" }
+    ],
+    "testimonials": [
+      { "text": "Une cuisine authentique et savoureuse, on revient chaque semaine !", "author": "Sophie M.", "position": "Cliente régulière" },
+      { "text": "Le meilleur rapport qualité-prix du quartier. Service impeccable.", "author": "Jean-Pierre L.", "position": "Habitué depuis 2 ans" },
+      { "text": "Cadre chaleureux et plats généreux, une vraie découverte.", "author": "Marie D.", "position": "Première visite" }
+    ],
+    "stats": [
+      { "number": "15+", "label": "Années d'expérience" },
+      { "number": "4.8★", "label": "Note moyenne" },
+      { "number": "50+", "label": "Plats à la carte" },
+      { "number": "100%", "label": "Produits frais" }
+    ],
+    "benefits": [
+      "Réservation en ligne 24h/24",
+      "Terrasse ensoleillée",
+      "Menu enfant disponible",
+      "Plats à emporter",
+      "Parking gratuit à proximité"
+    ],
+    "cta": "Réserver une table"
+  },
+
+  "medical": {
+    "features": [
+      { "title": "Équipe qualifiée", "description": "Professionnels diplômés avec une expérience reconnue" },
+      { "title": "Équipements modernes", "description": "Technologies de pointe pour des diagnostics précis" },
+      { "title": "Écoute attentive", "description": "Chaque patient bénéficie d'un suivi personnalisé" }
+    ],
+    "testimonials": [
+      { "text": "Prise en charge rapide et professionnelle, je recommande vivement.", "author": "Catherine R.", "position": "Patiente" },
+      { "text": "Enfin des praticiens qui prennent le temps d'écouter.", "author": "Michel B.", "position": "Patient régulier" },
+      { "text": "Cabinet moderne et équipe bienveillante, très satisfait.", "author": "Anne-Marie P.", "position": "Patiente" }
+    ],
+    "stats": [
+      { "number": "20+", "label": "Années d'expérience" },
+      { "number": "5000+", "label": "Patients suivis" },
+      { "number": "98%", "label": "Satisfaction" },
+      { "number": "24h", "label": "Délai de RDV" }
+    ],
+    "benefits": [
+      "Rendez-vous en ligne",
+      "Tiers payant accepté",
+      "Accès PMR",
+      "Urgences prises en charge",
+      "Secrétariat disponible"
+    ],
+    "cta": "Prendre rendez-vous"
+  },
+
+  "fitness": {
+    "features": [
+      { "title": "Coachs certifiés", "description": "Nos coachs sont diplômés d'État et passionnés" },
+      { "title": "Équipements premium", "description": "Machines dernière génération et espaces spacieux" },
+      { "title": "Suivi personnalisé", "description": "Programme adapté à vos objectifs et votre niveau" }
+    ],
+    "testimonials": [
+      { "text": "J'ai perdu 15kg en 6 mois grâce à leur accompagnement, incroyable !", "author": "Thomas K.", "position": "Membre depuis 1 an" },
+      { "text": "Ambiance motivante et coachs au top, je ne regrette pas mon abonnement.", "author": "Laura S.", "position": "Membre" },
+      { "text": "Enfin une salle où on se sent bien, merci à toute l'équipe.", "author": "Nicolas F.", "position": "Nouveau membre" }
+    ],
+    "stats": [
+      { "number": "500+", "label": "Membres actifs" },
+      { "number": "7j/7", "label": "Ouverture" },
+      { "number": "10+", "label": "Cours collectifs" },
+      { "number": "95%", "label": "Renouvellement" }
+    ],
+    "benefits": [
+      "Accès 7j/7 de 6h à 23h",
+      "Premier cours d'essai offert",
+      "Vestiaires avec sauna",
+      "Parking gratuit",
+      "Sans engagement possible"
+    ],
+    "cta": "Essai gratuit"
+  },
+
+  "immobilier": {
+    "features": [
+      { "title": "Expertise locale", "description": "Connaissance approfondie du marché immobilier local" },
+      { "title": "Accompagnement complet", "description": "De la recherche à la signature, nous sommes à vos côtés" },
+      { "title": "Réseau étendu", "description": "Accès à des biens exclusifs avant mise sur le marché" }
+    ],
+    "testimonials": [
+      { "text": "Vente réalisée en 3 semaines au prix souhaité, très professionnel.", "author": "François D.", "position": "Vendeur" },
+      { "text": "Ils ont trouvé l'appartement parfait pour notre famille.", "author": "Claire et Marc", "position": "Acquéreurs" },
+      { "text": "Conseils précieux et disponibilité remarquable.", "author": "Isabelle M.", "position": "Investisseur" }
+    ],
+    "stats": [
+      { "number": "200+", "label": "Biens vendus/an" },
+      { "number": "15+", "label": "Années d'expérience" },
+      { "number": "45j", "label": "Délai moyen de vente" },
+      { "number": "97%", "label": "Clients satisfaits" }
+    ],
+    "benefits": [
+      "Estimation gratuite sous 48h",
+      "Photos professionnelles incluses",
+      "Diffusion multi-portails",
+      "Accompagnement juridique",
+      "Visites virtuelles 360°"
+    ],
+    "cta": "Estimation gratuite"
+  },
+
+  "juridique": {
+    "features": [
+      { "title": "Expertise reconnue", "description": "Avocats spécialisés avec une solide expérience" },
+      { "title": "Confidentialité", "description": "Vos dossiers sont traités avec la plus grande discrétion" },
+      { "title": "Réactivité", "description": "Réponse rapide à toutes vos demandes" }
+    ],
+    "testimonials": [
+      { "text": "Dossier complexe résolu efficacement, je recommande ce cabinet.", "author": "Pierre T.", "position": "Chef d'entreprise" },
+      { "text": "Conseils clairs et stratégie gagnante, merci Maître.", "author": "Sylvie R.", "position": "Cliente" },
+      { "text": "Professionnalisme et humanité, rare dans la profession.", "author": "Laurent G.", "position": "Client" }
+    ],
+    "stats": [
+      { "number": "500+", "label": "Dossiers traités" },
+      { "number": "25+", "label": "Années au barreau" },
+      { "number": "92%", "label": "Affaires gagnées" },
+      { "number": "48h", "label": "Délai de réponse" }
+    ],
+    "benefits": [
+      "Premier rendez-vous gratuit",
+      "Honoraires transparents",
+      "Suivi en ligne de votre dossier",
+      "Disponibilité le samedi matin",
+      "Aide juridictionnelle acceptée"
+    ],
+    "cta": "Consultation gratuite"
+  },
+
+  "beaute": {
+    "features": [
+      { "title": "Produits haut de gamme", "description": "Nous utilisons uniquement des marques professionnelles" },
+      { "title": "Équipe expérimentée", "description": "Nos esthéticiennes sont formées aux dernières techniques" },
+      { "title": "Bien-être garanti", "description": "Un moment de détente dans un cadre apaisant" }
+    ],
+    "testimonials": [
+      { "text": "Le meilleur institut de la ville, je ne vais plus ailleurs !", "author": "Nathalie C.", "position": "Cliente fidèle" },
+      { "text": "Soin du visage exceptionnel, ma peau n'a jamais été aussi belle.", "author": "Émilie F.", "position": "Cliente" },
+      { "text": "Accueil chaleureux et prestations de qualité.", "author": "Sandrine L.", "position": "Nouvelle cliente" }
+    ],
+    "stats": [
+      { "number": "10+", "label": "Années d'expérience" },
+      { "number": "3000+", "label": "Clientes satisfaites" },
+      { "number": "30+", "label": "Soins proposés" },
+      { "number": "4.9★", "label": "Note Google" }
+    ],
+    "benefits": [
+      "Carte de fidélité avantageuse",
+      "Produits bio disponibles",
+      "Climatisation",
+      "Parking facile",
+      "Chèques cadeaux"
+    ],
+    "cta": "Prendre RDV"
+  },
+
+  "education": {
+    "features": [
+      { "title": "Pédagogie adaptée", "description": "Méthodes d'enseignement personnalisées selon chaque élève" },
+      { "title": "Enseignants qualifiés", "description": "Professeurs diplômés et expérimentés" },
+      { "title": "Suivi régulier", "description": "Bilans de progression et communication avec les parents" }
+    ],
+    "testimonials": [
+      { "text": "Mon fils a gagné 4 points de moyenne en maths, merci !", "author": "Véronique P.", "position": "Parent d'élève" },
+      { "text": "Méthode efficace et prof à l'écoute, je recommande.", "author": "Lucas M.", "position": "Élève de Terminale" },
+      { "text": "Préparation au bac réussie, mention Bien obtenue.", "author": "Emma D.", "position": "Étudiante" }
+    ],
+    "stats": [
+      { "number": "95%", "label": "Réussite aux examens" },
+      { "number": "1000+", "label": "Élèves accompagnés" },
+      { "number": "+3pts", "label": "Progression moyenne" },
+      { "number": "15+", "label": "Matières enseignées" }
+    ],
+    "benefits": [
+      "Premier cours d'évaluation offert",
+      "Cours à domicile ou en ligne",
+      "Stages intensifs vacances",
+      "Aide aux devoirs",
+      "Préparation examens et concours"
+    ],
+    "cta": "Cours d'essai gratuit"
+  },
+
+  "artisan": {
+    "features": [
+      { "title": "Savoir-faire artisanal", "description": "Techniques traditionnelles transmises de génération en génération" },
+      { "title": "Matériaux de qualité", "description": "Nous sélectionnons les meilleurs matériaux pour nos créations" },
+      { "title": "Sur-mesure", "description": "Chaque projet est unique et adapté à vos besoins" }
+    ],
+    "testimonials": [
+      { "text": "Travail soigné et dans les délais, artisan sérieux.", "author": "Philippe B.", "position": "Client" },
+      { "text": "Rénovation parfaite de notre cuisine, bravo !", "author": "Christine et Paul", "position": "Propriétaires" },
+      { "text": "Conseils avisés et réalisation impeccable.", "author": "Marc V.", "position": "Client" }
+    ],
+    "stats": [
+      { "number": "20+", "label": "Années de métier" },
+      { "number": "500+", "label": "Chantiers réalisés" },
+      { "number": "100%", "label": "Garantie décennale" },
+      { "number": "48h", "label": "Devis gratuit" }
+    ],
+    "benefits": [
+      "Devis gratuit et détaillé",
+      "Garantie décennale",
+      "Assurance RC Pro",
+      "Intervention rapide",
+      "Travail propre et soigné"
+    ],
+    "cta": "Demander un devis"
+  },
+
+  "ecommerce": {
+    "features": [
+      { "title": "Livraison rapide", "description": "Expédition sous 24-48h pour la plupart des produits" },
+      { "title": "Qualité garantie", "description": "Tous nos produits sont rigoureusement sélectionnés" },
+      { "title": "SAV réactif", "description": "Une équipe à votre écoute pour toute question" }
+    ],
+    "testimonials": [
+      { "text": "Commande reçue en 2 jours, produit conforme, parfait !", "author": "Julie R.", "position": "Cliente" },
+      { "text": "Service client au top, échange sans problème.", "author": "Stéphane M.", "position": "Client régulier" },
+      { "text": "Site fiable avec de bons produits, je recommande.", "author": "Amandine K.", "position": "Cliente" }
+    ],
+    "stats": [
+      { "number": "10000+", "label": "Commandes livrées" },
+      { "number": "4.7★", "label": "Note clients" },
+      { "number": "24h", "label": "Expédition" },
+      { "number": "30j", "label": "Retour gratuit" }
+    ],
+    "benefits": [
+      "Livraison gratuite dès 49€",
+      "Retour gratuit sous 30 jours",
+      "Paiement sécurisé",
+      "Programme de fidélité",
+      "Emballage soigné"
+    ],
+    "cta": "Voir la boutique"
+  },
+
+  "tech": {
+    "features": [
+      { "title": "Innovation continue", "description": "Nous adoptons les dernières technologies du marché" },
+      { "title": "Équipe experte", "description": "Développeurs et ingénieurs passionnés et certifiés" },
+      { "title": "Support dédié", "description": "Assistance technique réactive et personnalisée" }
+    ],
+    "testimonials": [
+      { "text": "Application livrée dans les temps et parfaitement fonctionnelle.", "author": "David L.", "position": "CTO Startup" },
+      { "text": "Collaboration fluide et résultats au-delà des attentes.", "author": "Marie-Claire H.", "position": "Directrice Produit" },
+      { "text": "Expertise technique solide, partenaire de confiance.", "author": "Julien P.", "position": "CEO" }
+    ],
+    "stats": [
+      { "number": "100+", "label": "Projets livrés" },
+      { "number": "99.9%", "label": "Uptime" },
+      { "number": "15+", "label": "Technologies maîtrisées" },
+      { "number": "24/7", "label": "Support" }
+    ],
+    "benefits": [
+      "Méthodologie Agile",
+      "Code documenté et maintenable",
+      "Tests automatisés",
+      "Déploiement continu",
+      "Formation incluse"
+    ],
+    "cta": "Démarrer un projet"
+  },
+
+  "veterinaire": {
+    "features": [
+      { "title": "Équipe passionnée", "description": "Vétérinaires et assistants amoureux des animaux" },
+      { "title": "Équipements modernes", "description": "Bloc opératoire, radiologie, échographie sur place" },
+      { "title": "Urgences 24h/24", "description": "Nous sommes là quand vos compagnons ont besoin de nous" }
+    ],
+    "testimonials": [
+      { "text": "Mon chat a été sauvé grâce à leur réactivité, merci infiniment.", "author": "Caroline B.", "position": "Propriétaire de Minou" },
+      { "text": "Clinique propre et personnel très doux avec les animaux.", "author": "Marc D.", "position": "Propriétaire de Rex" },
+      { "text": "Conseils précieux et suivi attentif, je recommande.", "author": "Aurélie F.", "position": "Propriétaire de 3 chats" }
+    ],
+    "stats": [
+      { "number": "10000+", "label": "Animaux soignés" },
+      { "number": "15+", "label": "Années d'expérience" },
+      { "number": "24/7", "label": "Urgences" },
+      { "number": "4.9★", "label": "Avis Google" }
+    ],
+    "benefits": [
+      "Rendez-vous en ligne",
+      "Urgences prises en charge",
+      "Parking facile",
+      "Facilités de paiement",
+      "Conseils nutrition offerts"
+    ],
+    "cta": "Prendre RDV"
+  },
+
+  "coaching": {
+    "features": [
+      { "title": "Approche personnalisée", "description": "Chaque accompagnement est adapté à votre situation unique" },
+      { "title": "Méthodologie éprouvée", "description": "Techniques validées par la recherche en développement personnel" },
+      { "title": "Résultats mesurables", "description": "Objectifs clairs et suivi de progression régulier" }
+    ],
+    "testimonials": [
+      { "text": "J'ai enfin osé changer de carrière, merci pour ce déclic !", "author": "Christophe M.", "position": "Coaché en transition pro" },
+      { "text": "Accompagnement bienveillant et efficace, je me sens transformée.", "author": "Isabelle G.", "position": "Coachée" },
+      { "text": "Sessions riches et percutantes, investissement qui en vaut la peine.", "author": "Antoine R.", "position": "Entrepreneur" }
+    ],
+    "stats": [
+      { "number": "300+", "label": "Personnes accompagnées" },
+      { "number": "95%", "label": "Objectifs atteints" },
+      { "number": "500h", "label": "Heures de coaching" },
+      { "number": "Certifié", "label": "ICF / RNCP" }
+    ],
+    "benefits": [
+      "Séance découverte gratuite",
+      "Séances en présentiel ou visio",
+      "Confidentialité garantie",
+      "Outils concrets à appliquer",
+      "Suivi entre les séances"
+    ],
+    "cta": "Réserver ma séance"
+  },
+
+  "photographe": {
+    "features": [
+      { "title": "Œil artistique", "description": "Capturer l'émotion et la beauté de chaque instant" },
+      { "title": "Matériel professionnel", "description": "Équipements haut de gamme pour des photos exceptionnelles" },
+      { "title": "Post-production soignée", "description": "Retouches professionnelles incluses dans chaque prestation" }
+    ],
+    "testimonials": [
+      { "text": "Photos de mariage sublimes, on en pleure encore d'émotion.", "author": "Élodie et Maxime", "position": "Mariés 2024" },
+      { "text": "Shooting corporate parfait, équipe ravie du résultat.", "author": "RH Manager", "position": "Entreprise cliente" },
+      { "text": "Portraits de famille naturels et authentiques, superbe travail.", "author": "Famille Dupont", "position": "Clients" }
+    ],
+    "stats": [
+      { "number": "500+", "label": "Shootings réalisés" },
+      { "number": "50+", "label": "Mariages capturés" },
+      { "number": "15+", "label": "Années d'expérience" },
+      { "number": "4.9★", "label": "Note moyenne" }
+    ],
+    "benefits": [
+      "Devis personnalisé gratuit",
+      "Galerie privée en ligne",
+      "Photos livrées sous 15 jours",
+      "Tirages d'art disponibles",
+      "Déplacement inclus (30km)"
+    ],
+    "cta": "Demander un devis"
+  },
+
+  "general": {
+    "features": [
+      { "title": "Qualité de service", "description": "Nous mettons un point d'honneur à satisfaire chaque client" },
+      { "title": "Expertise reconnue", "description": "Notre équipe possède une solide expérience dans son domaine" },
+      { "title": "Accompagnement dédié", "description": "Un interlocuteur unique pour répondre à toutes vos questions" }
+    ],
+    "testimonials": [
+      { "text": "Service impeccable et équipe professionnelle, je recommande.", "author": "Jean-Marc L.", "position": "Client" },
+      { "text": "Prestation de qualité, délais respectés, parfait.", "author": "Sophie D.", "position": "Cliente" },
+      { "text": "Très satisfait de la collaboration, à renouveler.", "author": "Pierre B.", "position": "Client" }
+    ],
+    "stats": [
+      { "number": "10+", "label": "Années d'expérience" },
+      { "number": "500+", "label": "Clients satisfaits" },
+      { "number": "98%", "label": "Taux de satisfaction" },
+      { "number": "48h", "label": "Délai de réponse" }
+    ],
+    "benefits": [
+      "Devis gratuit et sans engagement",
+      "Équipe réactive et disponible",
+      "Solutions sur mesure",
+      "Tarifs transparents",
+      "Garantie satisfaction"
+    ],
+    "cta": "Nous contacter"
+  }
+}
